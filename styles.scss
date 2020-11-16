@@ -12,43 +12,85 @@ body {
 }
 
 main {
-    height: 11in;
-    width: 8.5in;
-    padding: 0.1in;
+    height: $letter-height + 15px; // Added to cover the grid gap between rows.
+    width: $letter-width;
+    padding: $paper-padding;
+    margin-bottom: 25px;
     background: white;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
 
 .flexbox {
-    background: lightyellow;
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: (-1 * $paper-padding) 0 0 (-1 * $paper-padding);
-    width: $letter-width + (2 * $paper-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: $letter-height/2 $letter-height/2;
+    grid-auto-rows: $letter-height/2;
+    gap: 15px 10px;
 
     & > * {
-        margin: $paper-padding 0 0 $paper-padding;
         border: $border-width solid black;
+        background: lightblue;
     }
 }
 
-div.block {
-    background: lightblue;
-}
-
 .small {
-    height: $letter-height / 2;
-    width: (($letter-width - $paper-padding) / 2) - (2 * $border-width);
 }
 
 .medium {
-    height: $letter-height / 2;
-    width: $letter-width - (2 * $border-width);
+    grid-column-start: span 2;
 }
 
 .large {
-    height: $letter-height;
-    width: $letter-width;
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.block {
+    h3 {
+        border-bottom: 1px solid;
+        margin: 0;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-top: 1px black solid;
+        border-bottom: 1px black solid;
+
+        td {
+            text-align: center;
+        }
+        th {
+            text-align: center;
+        }
+    }
+
+    .header {
+        padding: 0.5rem;
+        margin: 0;
+        border-bottom: 1px black solid;
+
+        .name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .challenge-rating {
+            float: right!important;
+            line-height: 1.2;
+        }
+
+        .creature-type {
+            margin: 0;
+        }
+    }
+
+    .row {
+        padding: 0.5rem;
+    }
 }
 
 @media print {
@@ -58,5 +100,10 @@ div.block {
         padding: 0;
         background: none;
         box-shadow: none;
+    }
+
+    div.block {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }

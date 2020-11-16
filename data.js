@@ -62,8 +62,7 @@ var data = {
         {
             "pageSize": "medium",
             "name": "Young White Dragon",
-            "creatureSize": "Large",
-            "creatureType": "dragon",
+            "creatureType": "Large dragon",
             "creatureAlignment": "chaotic evil",
             "armorClass": "17",
             "armorDescription": "natural armor",
