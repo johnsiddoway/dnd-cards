@@ -3,69 +3,63 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <style type="text/css">
-            body {
-                background: rgb(204,204,204); 
-            }
-            div.monster {
-                background: white;
-                box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-                width: 152.4mm;
-                height: 101.6mm;
-                margin-bottom: 4rem;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <main role="main">
-            <div data-bind="foreach: monsters">
-                <div class="monster">
-                    <div>CR: <span data-bind="text: challengeRating"></span></div>
-                    <h1 data-bind="text: name"></h5>
-                    <p>(<span data-bind="text: creatureType"></span>, <span data-bind="text: creatureAlignment"></span>)</p>
-                    <hr/>
-                    <p><span>Armor Class: <span data-bind="text: armorClass"></span></span> (<span data-bind="text: armorDescription"></span>)</p>
-                    <p><span>Hit Points: <span data-bind="text: hitPoints"></span></span> (<span data-bind="text: hitPointsDescription"></span>)</p>
-                    <p><span>Speed:</span> <span data-bind="text: speed"></span></p> 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>STR</th>
-                                <th>DEX</th>
-                                <th>CON</th>
-                                <th>INT</th>
-                                <th>WIS</th>
-                                <th>CHA</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr data-bind="foreach: abilityScores">
-                                <td><span data-bind="text: $data"></span> (<span data-bind="visible: $data >= 10">+</span><span data-bind="text: $root.abilityScoreModifiers[$data]"></span>)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p data-bind="visible: skills"><strong>Skills:</strong> <span data-bind="text: skills"></span></p>
-                    <p><strong>Senses:</strong> <span data-bind="text: senses"></span></p>
-                    <p><strong>Languages:</strong> <span data-bind="text: languages"></span></p>
-                    <!-- ko foreach: abilities -->
-                    <p><strong data-bind="text: name"></strong> <span data-bind="text: description"></span></p>
-                    <!-- /ko -->
-                    <p data-bind="visible: spellcasting.description"><strong>Spellcasting: </strong> <span data-bind="text: spellcasting.description"></span></p>
-                    <!-- ko foreach: spellcasting.spells -->
-                    <p><span data-bind="text: level"></span> (<span data-bind="text: slots"></span>): <em data-bind="text: spells"></em></p>
-                    <!-- /ko -->
-                    <h3 class="mb-0 mt-2">Actions</h5>
-                    <!-- ko foreach: actions -->
-                    <p><strong data-bind="text: name"></strong> <span data-bind="text: description"></span></p>
-                    <!-- /ko -->
+        <main role="main" data-bind="foreach: monsters">
+            <div class="page">
+                <div class="header">
+                    <div class="challenge-rating">CR: <span data-bind="text: challengeRating"></span></div>
+                    <div class="name" data-bind="text: name"></div>
+                    <div class="creature-type"><em>(<span data-bind="text: creatureType"></span>, <span data-bind="text: creatureAlignment"></span>)</em></div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="column">
+                        <div><strong>Armor Class: <span data-bind="text: armorClass"></span></strong> (<span data-bind="text: armorDescription"></span>)</div>
+                        <div><strong>Hit Points: <span data-bind="text: hitPoints"></span></strong> (<span data-bind="text: hitPointsDescription"></span>)</div>
+                        <div><strong>Speed:</strong> <span data-bind="text: speed"></span></div> 
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>STR</th>
+                                    <th>DEX</th>
+                                    <th>CON</th>
+                                    <th>INT</th>
+                                    <th>WIS</th>
+                                    <th>CHA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-bind="foreach: abilityScores">
+                                    <td><span data-bind="visible: $data >= 10">+</span><span data-bind="text: $root.abilityScoreModifiers[$data]"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div data-bind="visible: skills"><strong>Skills:</strong> <span data-bind="text: skills"></span></div>
+                        <div><strong>Senses:</strong> <span data-bind="text: senses"></span></div>
+                        <div><strong>Languages:</strong> <span data-bind="text: languages"></span></div>
+                        <!-- ko foreach: abilities -->
+                        <div><strong data-bind="text: name"></strong> <span data-bind="text: description"></span></div>
+                        <!-- /ko -->
+                    </div>
+                    <div class="column">
+                        <div data-bind="visible: spellcasting.description"><strong>Spellcasting: </strong> <span data-bind="text: spellcasting.description"></span></div>
+                        <!-- ko foreach: spellcasting.spells -->
+                        <div><span data-bind="text: level"></span> (<span data-bind="text: slots"></span>): <em data-bind="text: spells"></em></div>
+                        <!-- /ko -->
+                        <h3 class="mb-0 mt-2">Actions</h3>
+                        <!-- ko foreach: actions -->
+                        <div><strong data-bind="text: name"></strong> <span data-bind="text: description"></span></div>
+                        <!-- /ko -->
+                    </div>
+                </div> <!-- /stats -->
+            </div> <!-- /page -->
         </main>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
         <!-- If you want to change the list of monsters / NPCs, uncomment the local reference and comment the Github URL -->
-        <!-- <script type="text/javascript" src="data.js"></script> -->
-        <script type="text/javascript" src="https://github.com/johnsiddoway/dnd-cards/blob/main/data.js"></script>
+        <script type="text/javascript" src="data.js"></script>
+        <!-- <script type="text/javascript" src="https://raw.githubusercontent.com/johnsiddoway/dnd-cards/main/data.js" crossorigin="anonymous"></script> -->
         <script type="text/javascript">
             $(document).ready(function () {
                 ko.applyBindings(data);

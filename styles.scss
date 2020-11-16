@@ -1,0 +1,111 @@
+:root {
+    --a4-height: 297mm;
+    --a4-width: 210mm;
+    --a5-height: 210mm;
+    --a5-width: 148mm;
+    --a6-height: 148mm;
+    --a6-width: 105mm;
+    --print-border: 2mm;
+}
+
+body {
+    background: rgb(204,204,204);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.85rem;
+}
+
+div.page {
+    background: white;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    width: var(--a5-height);
+    height: var(--a5-width);
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    table {
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-top: 1px darkgrey solid;
+        border-bottom: 1px darkgrey solid;
+    
+        td {
+            text-align: center;
+        }
+        th {
+            text-align: center;
+        }
+    }
+}
+
+.header {
+    // background: rgba(255, 70, 70, 0.5);
+    margin: 0 0 0.5rem 0;
+    padding: 0 0 0.5rem 0;
+    border-bottom: 1px black solid;
+
+    .name {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .challenge-rating {
+        float: right!important;
+        line-height: 1.2;
+    }
+
+    .creature-type {
+        margin: 0;
+    }
+}
+  
+.row {
+    --gap: 1rem;
+    // background: darkblue;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin: 0 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
+
+    /* Create two equal columns that sits next to each other */
+    .column {
+        // background: lightblue;
+        flex: calc(50% - calc(var(--gap)/2));
+    }
+
+    & > * {
+        margin: 0 0 0 var(--gap);
+    }
+}
+
+* {
+    box-sizing: border-box;
+} 
+.float-right {
+    float: right!important;
+}
+.font-bold {
+    font-weight: bold;
+}
+.font-italic {
+    font-style: italic!important;
+}
+
+@media print {
+    div.page {
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        height: calc(var(--a5-width) - calc(2 * var(--print-border)));
+        height: 142mm;
+        margin-bottom: 0;
+        break-before: always;
+        page-break-before: always;
+    }
+    @page {
+        size: A5 landscape;
+        margin: var(--print-border);
+    }
+}
