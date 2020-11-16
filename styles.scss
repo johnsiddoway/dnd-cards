@@ -5,7 +5,11 @@
     --a5-width: 148mm;
     --a6-height: 148mm;
     --a6-width: 105mm;
+
+    --page-size: A6 landscape;
     --print-border: 2mm;
+    --width: 148mm;
+    --height: 105mm;
 }
 
 body {
@@ -17,10 +21,15 @@ body {
 div.page {
     background: white;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-    width: var(--a5-height);
-    height: var(--a5-width);
+    width: var(--width);
+    height: var(--height);
     padding: 1rem;
     margin-bottom: 2rem;
+
+    h3 {
+        border-bottom: 1px solid;
+        margin: 0;
+    }
 
     table {
         width: 100%;
@@ -98,14 +107,13 @@ div.page {
         border: none;
         box-shadow: none;
         width: 100%;
-        height: calc(var(--a5-width) - calc(2 * var(--print-border)));
-        height: 142mm;
+        height: calc(var(--height) - calc(2 * var(--print-border)));
         margin-bottom: 0;
         break-before: always;
         page-break-before: always;
     }
     @page {
-        size: A5 landscape;
+        size: var(--page-size);
         margin: var(--print-border);
     }
 }

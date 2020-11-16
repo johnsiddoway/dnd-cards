@@ -26,7 +26,7 @@ var data = {
             "spellcasting": {},
             "actions": [
                 { "name": "Greataxe", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (ldl2 + 3) slashing damage." },
-                { "name": "Javeline", "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (ld6 + 3) piercing damage." }
+                { "name": "Javelin", "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (ld6 + 3) piercing damage." }
             ],
             "legendaryActions": {}
         },
@@ -53,7 +53,7 @@ var data = {
             "spellcasting": {},
             "actions": [
                 { "name": "Greatclub", "description": "Melee Weapon Attack: +6 to hit, reach 5 ft, one target. Hit: 13 (2d8 + 4) bludgeoning damage." },
-                { "name": "Javeline", "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft or range 30/120 ft, one target. Hit: 11 (2d6 + 4) piercing damage." }
+                { "name": "Javelin", "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft or range 30/120 ft, one target. Hit: 11 (2d6 + 4) piercing damage." }
             ],
             "legendaryActions": {}
         },
@@ -114,7 +114,7 @@ var data = {
             "hitPoints": "33",
             "hitPointsDescription": "6d8 + 6",
             "speed": "30 ft",
-            "abilityScores": [10, 15,12, 11, 10, 8],
+            "abilityScores": [10, 15, 12, 11, 10, 8],
             "savingThrows": null,
             "skills": "Perception +2, Stealth +4",
             "damageResistances": null,
@@ -162,7 +162,7 @@ var data = {
             "hitPoints": "243",
             "hitPointsDescription": "18d10 + 144",
             "speed": "50 ft, fly 150 ft",
-            "abilityScores": [26,22,26,25,25,30],
+            "abilityScores": [26, 22, 26, 25, 25, 30],
             "savingThrows": "Int +14, Wis +14, Cha +17",
             "skills": "Perception +14",
             "damageResistances": "radiant; bludgeoning, piercing, and slashing from nonmagical attacks",
