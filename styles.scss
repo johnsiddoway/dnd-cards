@@ -1,16 +1,9 @@
-:root {
-    --a4-height: 297mm;
-    --a4-width: 210mm;
-    --a5-height: 210mm;
-    --a5-width: 148mm;
-    --a6-height: 148mm;
-    --a6-width: 105mm;
+$border-width: 1px;
 
-    --page-size: A6 landscape;
-    --print-border: 2mm;
-    --width: 148mm;
-    --height: 105mm;
-}
+$paper-padding: 0.1in;
+
+$letter-height: 11in;
+$letter-width: 8.5in;
 
 body {
     background: rgb(204,204,204);
@@ -18,102 +11,52 @@ body {
     font-size: 0.85rem;
 }
 
-div.page {
+main {
+    height: 11in;
+    width: 8.5in;
+    padding: 0.1in;
     background: white;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-    width: var(--width);
-    height: var(--height);
-    padding: 1rem;
-    margin-bottom: 2rem;
-
-    h3 {
-        border-bottom: 1px solid;
-        margin: 0;
-    }
-
-    table {
-        width: 100%;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        border-top: 1px darkgrey solid;
-        border-bottom: 1px darkgrey solid;
-    
-        td {
-            text-align: center;
-        }
-        th {
-            text-align: center;
-        }
-    }
 }
 
-.header {
-    // background: rgba(255, 70, 70, 0.5);
-    margin: 0 0 0.5rem 0;
-    padding: 0 0 0.5rem 0;
-    border-bottom: 1px black solid;
-
-    .name {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.2;
-        margin: 0;
-    }
-
-    .challenge-rating {
-        float: right!important;
-        line-height: 1.2;
-    }
-
-    .creature-type {
-        margin: 0;
-    }
-}
-  
-.row {
-    --gap: 1rem;
-    // background: darkblue;
+.flexbox {
+    background: lightyellow;
     display: inline-flex;
-    flex-wrap: nowrap;
-    margin: 0 0 0 calc(-1 * var(--gap));
-    width: calc(100% + var(--gap));
-
-    /* Create two equal columns that sits next to each other */
-    .column {
-        // background: lightblue;
-        flex: calc(50% - calc(var(--gap)/2));
-    }
+    flex-wrap: wrap;
+    margin: (-1 * $paper-padding) 0 0 (-1 * $paper-padding);
+    width: $letter-width + (2 * $paper-padding);
 
     & > * {
-        margin: 0 0 0 var(--gap);
+        margin: $paper-padding 0 0 $paper-padding;
+        border: $border-width solid black;
     }
 }
 
-* {
-    box-sizing: border-box;
-} 
-.float-right {
-    float: right!important;
+div.block {
+    background: lightblue;
 }
-.font-bold {
-    font-weight: bold;
+
+.small {
+    height: $letter-height / 2;
+    width: (($letter-width - $paper-padding) / 2) - (2 * $border-width);
 }
-.font-italic {
-    font-style: italic!important;
+
+.medium {
+    height: $letter-height / 2;
+    width: $letter-width - (2 * $border-width);
+}
+
+.large {
+    height: $letter-height;
+    width: $letter-width;
 }
 
 @media print {
-    div.page {
-        border: none;
+    main {
+        height: $letter-height;
+        width: $letter-width;
+        padding: 0;
+        background: none;
         box-shadow: none;
-        width: 100%;
-        height: calc(var(--height) - calc(2 * var(--print-border)));
-        margin-bottom: 0;
-        break-before: always;
-        page-break-before: always;
-    }
-    @page {
-        size: var(--page-size);
-        margin: var(--print-border);
     }
 }
