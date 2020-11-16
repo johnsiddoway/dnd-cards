@@ -80,9 +80,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
         <!-- If you want to change the list of monsters / NPCs, uncomment the local reference and comment the Github URL -->
         <script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript" src="custom-data.js"></script>
         <!-- <script type="text/javascript" src="https://raw.githubusercontent.com/johnsiddoway/dnd-cards/main/data.js" crossorigin="anonymous"></script> -->
         <script type="text/javascript">
             $(document).ready(function () {
+                data.monsters.push(...customData.monsters); // combine the SRD stats with non-SRD stats
                 ko.applyBindings(data);
             });
         </script>
