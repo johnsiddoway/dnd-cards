@@ -35,21 +35,36 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div data-bind="visible: skills"><strong>Skills:</strong> <span data-bind="text: skills"></span></div>
-                        <div><strong>Senses:</strong> <span data-bind="text: senses"></span></div>
-                        <div><strong>Languages:</strong> <span data-bind="text: languages"></span></div>
+                        <div data-bind="visible: savingThrows"><strong>Saving Throws</strong> <span data-bind="text: savingThrows"></span></div>
+                        <div data-bind="visible: skills"><strong>Skills</strong> <span data-bind="text: skills"></span></div>
+                        <div data-bind="visible: damageResistances"><strong>Damage damageResistances</strong> <span data-bind="text: damageResistances"></span></div>
+                        <div data-bind="visible: damageImmunities"><strong>Damage Immunities</strong> <span data-bind="text: damageImmunities"></span></div>
+                        <div data-bind="visible: conditionImmunities"><strong>Condition Immunities</strong> <span data-bind="text: conditionImmunities"></span></div>
+                        <div data-bind="visible: senses"><strong>Senses</strong> <span data-bind="text: senses"></span></div>
+                        <div data-bind="visible: languages"><strong>Languages</strong> <span data-bind="text: languages"></span></div>
                         <!-- ko foreach: abilities -->
                         <div><strong data-bind="text: name"></strong> <span data-bind="text: description"></span></div>
                         <!-- /ko -->
                     </div>
                     <div class="column">
+                        <div data-bind="visible: innateSpellcasting.description"><strong>Innate Spellcasting: </strong> <span data-bind="text: spellcasting.description"></span></div>
+                        <!-- ko foreach: innateSpellcasting.spells -->
+                        <div><span data-bind="text: level"></span> <em data-bind="text: spells"></em></div>
+                        <!-- /ko -->
                         <div data-bind="visible: spellcasting.description"><strong>Spellcasting: </strong> <span data-bind="text: spellcasting.description"></span></div>
                         <!-- ko foreach: spellcasting.spells -->
                         <div><span data-bind="text: level"></span> (<span data-bind="text: slots"></span>): <em data-bind="text: spells"></em></div>
                         <!-- /ko -->
-                        <h3 class="mb-0 mt-2">Actions</h3>
+                        <h3>Actions</h3>
                         <!-- ko foreach: actions -->
                         <div><strong data-bind="text: name"></strong> <span data-bind="text: description"></span></div>
+                        <!-- /ko -->
+                        <div data-bind="visible: legendaryActions.description">
+                            <h4>Legendary Actions</h4>
+                            <span data-bind="text: spellcasting.description"></span>
+                        </div>
+                        <!-- ko foreach: legendaryActions.actions -->
+                        <div><span data-bind="text: name"></span> <em data-bind="text: description"></em></div>
                         <!-- /ko -->
                     </div>
                 </div> <!-- /stats -->
