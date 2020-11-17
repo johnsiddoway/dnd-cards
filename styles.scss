@@ -118,8 +118,29 @@ main {
         }
     }
 
-    .row {
+    .main {
         padding: 0.5rem;
+
+        .basic-stats {
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+        }
+
+        > div {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    }
+
+    &.medium > .main, &.large > .main {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
     }
 }
 
