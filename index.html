@@ -3,24 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
+        <header class="float-right">
             <div class="selectors" data-bind="">
-                <div data-bind="foreach: monsters">
-                    <div class="monster">
-                        <div class="float-right"><i class="fas fa-plus-square fa-lg font-awesome-button" data-bind="click: $root.selectMonster"></i></div>
-                        <div data-bind="text: name"></div>
+                <div class="available" data-bind="foreach: monsters">
+                    <div class="monster noselect" data-bind="click: $root.selectMonster">
+                        <span data-bind="text: name"></span>
                     </div>
                 </div>
-                <div>Selected Monsters</div>
+                <div class="selected" data-bind="foreach: monstersSelected">
+                    <div class="monster noselect" data-bind="click: $root.removeMonster">
+                        <span data-bind="text: name"></span>
+                    </div>
+                </div>
             </div>
         </header>
         <main role="main">
             <div class="flexbox" data-bind="foreach: monstersSelected">
-                <div class="block" data-bind="class: pageSize">
+                <div class="statblock" data-bind="class: pageSize">
                     <div class="header">
                         <div class="challenge-rating float-right">CR: <span data-bind="text: challengeRating"></span></div>
                         <div class="name" data-bind="text: name"></div>
