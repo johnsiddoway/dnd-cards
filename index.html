@@ -100,12 +100,12 @@
         <script type="text/javascript">
             var page = new Page();
             $(document).ready(function () {
-                data.monsters.push(...customData.monsters); // combine the SRD stats with non-SRD stats
-                data.monsters.sort((a,b) => (a.pageSize < b.pageSize)
+                monsters.push(...customMonsters); // combine the SRD stats with non-SRD stats
+                monsters.sort((a,b) => (a.pageSize < b.pageSize)
                     ? (a.name > b.name) ? 1 : -1
                     : (a.name > b.name) ? 1 : -1
                 );
-                page.init(data.monsters);
+                page.init(monsters);
                 ko.applyBindings(page);
             });
         </script>
