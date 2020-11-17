@@ -103,5 +103,45 @@ var monsters = [
             }
         ],
         "legendaryActions": {}
-    }
+    },
+    {
+        "pageSize": "small",
+        "name": "Ape",
+        "challengeRating": "1/2 (100 XP)",
+        "creatureType": "Medium beast",
+        "creatureAlignment": "unaligned",
+        "armorClass": "12",
+        "armorDescription": "",
+        "hitPoints": "19",
+        "hitPointsDescription": "3d8 + 6",
+        "speed": "30 ft, climb 30 ft",
+        "abilityScores": [16, 14, 14, 6, 12, 7],
+        "savingThrows": null,
+        "skills": "Athletics +5, Perception +3",
+        "damageResistances": null,
+        "damageImmunities": null,
+        "conditionImmunities": null,
+        "senses": "passive Percepion 13",
+        "languages": "-",
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "abilities": [],
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The ape makes two fist attacks."
+            },
+            {
+                "name": "Fist",
+                "type": "Melee Weapon Attack",
+                "description": "+5 to hit, reach 5 ft, one target. Hit: 6 (ld6 + 3) bludgeoning damage."
+            },
+            {
+                "name": "Rock",
+                "type": "Ranged Weapon Attack",
+                "description": "+5 to hit, range 25/50 ft, one target. Hit: 6 (1d6 + 3) bludgeoning damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
 ];
