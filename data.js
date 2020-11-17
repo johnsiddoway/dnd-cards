@@ -144,4 +144,91 @@ var monsters = [
         ],
         "legendaryActions": {}
     },
+    {
+        "pageSize": "large",
+        "name": "Solar",
+        "challengeRating": "21 (33,000 XP)",
+        "creatureType": "Large celestial",
+        "creatureAlignment": "lawful good",
+        "armorClass": "21",
+        "armorDescription": "natural armor",
+        "hitPoints": "243",
+        "hitPointsDescription": "18d10 + 144",
+        "speed": "50 ft, fly 150 ft",
+        "abilityScores": [26, 22, 26, 25, 25, 30],
+        "savingThrows": "Int +14, Wis +14, Cha +17",
+        "skills": "Perception +14",
+        "damageResistances": "radiant; bludgeoning, piercing, and slashing from non-magical attacks",
+        "damageImmunities": "necrotic, poison",
+        "conditionImmunities": "charmed, exhaustion, frightened, poisoned",
+        "senses": "truesight 120 ft, Passive Percepion 24",
+        "languages": "all, telepathy 120 ft",
+        "abilities": [
+            { "name": "Angelic Weapons", "description": "The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack)." },
+            { "name": "Divine Awareness", "description": "The solar knows if it hears a lie." },
+            { "name": "Magic Resistance", "description": "The solar has advantage on saving throws against spells and other magical effects." }
+        ],
+        "innateSpellcasting": {
+            "description": "The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:",
+            "spells": [
+                {
+                    "level": "At will",
+                    "spells": "detect evil and god, invisibility (self only)"
+                },
+                {
+                    "level": "3/day each",
+                    "spells": "blade barrier, dispel evil and good, resurrection"
+                },
+                {
+                    "level": "1/day each",
+                    "spells": "commune, control weather"
+                }
+            ]
+        },
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "type": "",
+                "description": "The solar makes two greatsword attacks."
+            },
+            {
+                "name": "Greatsword",
+                "type": "Melee Weapon Attack",
+                "description": "+15 to hit, reach 5 ft, one target. Hit: 22 (4d6 + 8) slashing damage plus 27 (6d8) radiant damage."
+            },
+            {
+                "name": "Slaying Longbow",
+                "type": "Ranged Weapon Attack",
+                "description": "+13 to hit, range 150/600 ft, one target. Hit: 15 (2d8 + 6) piercing damage plus 27 (6d8) radiant damage. If the target is a creature that has 100 hit points or fewer, it must succeed on a DC 15 Constitution saving throw or die."
+            },
+            {
+                "name": "Flying Sword",
+                "type": "",
+                "description": "The solar releases its greatsword to hover magically in an unoccupied space within 5 feet of it. If the solar can see the sword, the solar can mentally command it as a bonus action to fly up to 50 feet and either make one attack against a target or return to the solar's hand. If the hovering sword is targeted by any effect, the solar is considered to be holding it. The hovering sword falls if the solar dies."
+            },
+            {
+                "name": "Healing Touch (4/Day)",
+                "type": "",
+                "description": "The solar touches another creature. The target magically regains 40 (8d8 + 4) hit points and is freed from any curse, disease, poison, blindness, or deafness."
+            }
+        ],
+        "legendaryActions": {
+            "description": "The solar can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The solar regains spent legendary actions at the start of its turn.",
+            "actions": [
+                {
+                    "name": "Teleport",
+                    "description": "The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see."
+                },
+                {
+                    "name": "Searing Burst (Costs 2 Actions)",
+                    "description": "The solar emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a DC 23 Dexterity saving throw, taking 14 (4d6) fire damage plus 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one."
+                },
+                {
+                    "name": "Blinding Gaze (Costs 3 Actions)",
+                    "description": "The solar targets one creature it can see within 30 feet of it. If the target can see it, the target must succed on a DC 15 Constitution saving throw or be blinded until magic such as the lesser restoration spell removes blindness."
+                }
+            ]
+        }
+    }
 ];
