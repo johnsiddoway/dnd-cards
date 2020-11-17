@@ -11,6 +11,32 @@ body {
     font-size: 0.85rem;
 }
 
+header {
+    min-height: 100px;
+    width: $letter-width;
+    padding: $paper-padding;
+    margin-bottom: 25px;
+    background: white;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+
+    .selectors {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+
+        & > * {
+            border: $border-width solid black;
+            background: lightblue;
+        }
+
+        .monster {
+            line-height: 1.5rem;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+}
+
 main {
     height: $letter-height + 15px; // Added to cover the grid gap between rows.
     width: $letter-width;
@@ -79,7 +105,6 @@ main {
         }
 
         .challenge-rating {
-            float: right!important;
             line-height: 1.2;
         }
 
@@ -93,7 +118,17 @@ main {
     }
 }
 
+.float-right {
+    float: right!important;
+}
+.font-awesome-button {
+    cursor: pointer;
+}
+
 @media print {
+    header {
+        display: none;
+    }
     main {
         height: $letter-height;
         width: $letter-width;

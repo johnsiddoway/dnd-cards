@@ -3,14 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <header>
+            <div class="selectors" data-bind="">
+                <div data-bind="foreach: monsters">
+                    <div class="monster">
+                        <div class="float-right"><i class="fas fa-plus-square fa-lg font-awesome-button" data-bind="click: $root.selectMonster"></i></div>
+                        <div data-bind="text: name"></div>
+                    </div>
+                </div>
+                <div>Selected Monsters</div>
+            </div>
+        </header>
         <main role="main">
-            <div class="flexbox" data-bind="foreach: monsters">
+            <div class="flexbox" data-bind="foreach: monstersSelected">
                 <div class="block" data-bind="class: pageSize">
                     <div class="header">
-                        <div class="challenge-rating">CR: <span data-bind="text: challengeRating"></span></div>
+                        <div class="challenge-rating float-right">CR: <span data-bind="text: challengeRating"></span></div>
                         <div class="name" data-bind="text: name"></div>
                         <div class="creature-type"><em>(<span data-bind="text: creatureType"></span>, <span data-bind="text: creatureAlignment"></span>)</em></div>
                     </div>
@@ -79,13 +91,20 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
         <!-- If you want to change the list of monsters / NPCs, uncomment the local reference and comment the Github URL -->
+        <script type="text/javascript" src="page.js"></script>
         <script type="text/javascript" src="data.js"></script>
         <script type="text/javascript" src="custom-data.js"></script>
         <!-- <script type="text/javascript" src="https://raw.githubusercontent.com/johnsiddoway/dnd-cards/main/data.js" crossorigin="anonymous"></script> -->
         <script type="text/javascript">
+            var page = new Page();
             $(document).ready(function () {
                 data.monsters.push(...customData.monsters); // combine the SRD stats with non-SRD stats
-                ko.applyBindings(data);
+                data.monsters.sort((a,b) => (a.pageSize < b.pageSize)
+                    ? (a.name > b.name) ? 1 : -1
+                    : (a.name > b.name) ? 1 : -1
+                );
+                page.init(data.monsters);
+                ko.applyBindings(page);
             });
         </script>
     </body>

@@ -1,3 +1,0 @@
-var customData = {
-    monsters: []
-}
