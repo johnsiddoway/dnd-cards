@@ -234,5 +234,60 @@ var monsters = [
                 }
             ]
         }
+    },
+    {
+        "pageSize": "medium",
+        "name": "Wererat",
+        "challengeRating": 2,
+        "creatureSize": "Medium",
+        "creatureType": "humanoid (human, shapechanger)",
+        "creatureAlignment": "lawful evil",
+        "armorClass": 12,
+        "armorDescription": null,
+        "hitPoints": 33,
+        "hitPointsDescription": "6d8 + 6",
+        "speed": "30 ft",
+        "abilityScores": [10, 15, 12, 11, 10, 8],
+        "savingThrows": null,
+        "skills": "Perception +2, Stealth +4",
+        "damageResistances": "",
+        "damageImmunities": "bludgeoning, piercing, and slashing from nonmagical attacks not made with silvered weapons",
+        "conditionImmunities": "",
+        "senses": "darkvision 60 ft, passive Percepion 12",
+        "languages": "Common (can't speak in rat form)",
+        "abilities": [
+            {
+                "name": "Shapechanger",
+                "description": "The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form when it dies."
+            },
+            {
+                "name": "Keen Smell",
+                "description": "The wererat has advantage on Wisdom (Perception) checks that rely on smell."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack (Humanoid o Hybrid Form Only)",
+                "description": "The wererat makes two attacks, only one of which can be a bite."
+            },
+            {
+                "name": "Bite (Rat or Hybrid Form Only)",
+                "type": "Melee Weapon Attack",
+                "description": "+4 to hit, reach 5 ft, one target. Hit: 4 (1d4 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy."
+            },
+            {
+                "name": "Shortsword (Humanoid or Hybrid Form Only)",
+                "type": "Melee Weapon Attack",
+                "description": "+4 to hit, reach 5 ft, one target. Hit: 5 (1d6 + 2) piercing damage."
+            },
+            {
+                "name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+                "type": "Ranged Weapon Attack",
+                "description": "+4 to hit, range 30/120 ft, one target. Hit: 5 (1d6 + 2) piercing damage."
+            }
+        ],
+        "legendaryActions": {}
     }
 ];
