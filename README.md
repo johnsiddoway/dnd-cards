@@ -21,9 +21,10 @@ Complex stats (Innate Spellcasting, Spellcasting, Actions, and Legendary Actions
 {
     "pageSize": "small|medium|large, used to determine if the monster should take one quarter, one half, or one full page",
     "name": "",
-    "challengeRating": "X (Y XP)",
-    "creatureType": "Small|Medium|Large ...",
-    "creatureAlignment": "lawful|neutral|chaotic good|neutral|evil",
+    "challengeRating": "1/8|1/4|1/2|1",
+    "creatureSize": "Small|Medium|Large",
+    "creatureType": "humanoid",
+    "creatureAlignment": "lawful good",
     "armorClass": "",
     "armorDescription": "",
     "hitPoints": "",

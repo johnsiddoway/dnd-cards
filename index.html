@@ -24,13 +24,13 @@
             <div class="flexbox" data-bind="foreach: monstersSelected">
                 <div class="statblock" data-bind="class: pageSize">
                     <div class="header">
-                        <div class="challenge-rating float-right">CR: <span data-bind="text: challengeRating"></span></div>
+                        <div class="challenge-rating float-right">CR: <span data-bind="text: challengeRating"></span> (<span data-bind="text: $root.crToXP.get(challengeRating).toLocaleString()"></span> XP)</div>
                         <div class="name" data-bind="text: name"></div>
-                        <div class="creature-type"><em>(<span data-bind="text: creatureType"></span>, <span data-bind="text: creatureAlignment"></span>)</em></div>
+                        <div class="creature-type"><em>(<span data-bind="text: creatureSize"></span> <span data-bind="text: creatureType"></span>, <span data-bind="text: creatureAlignment"></span>)</em></div>
                     </div> <!-- /header -->
                     <div class="main">
                         <div class="basic-stats">
-                            <div><strong>Armor Class: <span data-bind="text: armorClass"></span></strong> (<span data-bind="text: armorDescription"></span>)</div>
+                            <div><strong>Armor Class: <span data-bind="text: armorClass"></span></strong> <span data-bind="visible: armorDescription">(<span data-bind="text: armorDescription"></span>)</span></div>
                             <div><strong>Hit Points: <span data-bind="text: hitPoints"></span></strong> (<span data-bind="text: hitPointsDescription"></span>)</div>
                             <div><strong>Speed:</strong> <span data-bind="text: speed"></span></div> 
                             <table>

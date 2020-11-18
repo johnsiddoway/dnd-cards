@@ -2,8 +2,9 @@ var monsters = [
     {
         "pageSize": "small",
         "name": "Orc",
-        "challengeRating": "1/2 (100 XP)",
-        "creatureType": "Medium humanoid",
+        "challengeRating": "1/2",
+        "creatureSize": "Medium",
+        "creatureType": "humanoid (orc)",
         "creatureAlignment": "chaotic evil",
         "armorClass": "13",
         "armorDescription": "hide armor",
@@ -32,8 +33,9 @@ var monsters = [
     {
         "pageSize": "small",
         "name": "Ogre",
-        "challengeRating": "2 (450 XP)",
-        "creatureType": "Large giant",
+        "challengeRating": 2,
+        "creatureSize": "Large",
+        "creatureType": "giant",
         "creatureAlignment": "chaotic evil",
         "armorClass": "11",
         "armorDescription": "hide armor",
@@ -60,7 +62,9 @@ var monsters = [
     {
         "pageSize": "medium",
         "name": "Young White Dragon",
-        "creatureType": "Large dragon",
+        "challengeRating": 6,
+        "creatureSize": "Large",
+        "creatureType": "dragon",
         "creatureAlignment": "chaotic evil",
         "armorClass": "17",
         "armorDescription": "natural armor",
@@ -75,8 +79,6 @@ var monsters = [
         "conditionImmunities": null,
         "senses": "Blindsight 30 ft, Darkvision 120 ft, Passive Percepion 16",
         "languages": "Common, Draconic",
-        "challengeRating": 6,
-        "experiencePoints": 2300,
         "abilities": [
             { "name": "Ice Walk", "description": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement." }
         ],
@@ -107,8 +109,9 @@ var monsters = [
     {
         "pageSize": "small",
         "name": "Ape",
-        "challengeRating": "1/2 (100 XP)",
-        "creatureType": "Medium beast",
+        "challengeRating": "1/2",
+        "creatureSize": "Medium",
+        "creatureType": "beast",
         "creatureAlignment": "unaligned",
         "armorClass": "12",
         "armorDescription": "",
@@ -147,8 +150,9 @@ var monsters = [
     {
         "pageSize": "large",
         "name": "Solar",
-        "challengeRating": "21 (33,000 XP)",
-        "creatureType": "Large celestial",
+        "challengeRating": 21,
+        "creatureSize": "Large",
+        "creatureType": "celestial",
         "creatureAlignment": "lawful good",
         "armorClass": "21",
         "armorDescription": "natural armor",
