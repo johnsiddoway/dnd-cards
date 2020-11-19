@@ -9,9 +9,8 @@ function monsterPage() {
     self.monsters = ko.observableArray();
     self.currentSize = ko.computed(function(){
         var total = 0;
-        for(var p = 0; p < self.monsters().length; ++p)
-        {
-            total += self.pageSizes.get(self.monsters()[p].pageSize);
+        for(var i = 0; i < self.monsters().length; i++) {
+            total += self.pageSizes.get(self.monsters()[i].pageSize);
         }
         return total;
     });
@@ -49,6 +48,15 @@ function Page() {
 
     self.removeMonster = function(monster) {
         self.monstersSelected.remove(monster);
+        var pagesToDelete = [];
+        for(var i = 0; i < self.pages().length; i++) {
+            var p = self.pages()[i];
+            p.monsters.remove(monster);
+            if (p.currentSize() === 0) {
+                pagesToDelete.push(p);
+            }
+        }
+        pagesToDelete.forEach(p => page.pages.remove(p));        
     }
 
     self.init = function (monsters) {
