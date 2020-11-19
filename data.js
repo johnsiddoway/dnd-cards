@@ -289,5 +289,343 @@ var monsters = [
             }
         ],
         "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Acolyte",
+        "challengeRating": "1/4",
+        "creatureSize": "Medium",
+        "creatureType": "humanoid (any race)",
+        "creatureAlignment": "any alignment",
+        "armorClass": 10,
+        "armorDescription": null,
+        "hitPoints": 9,
+        "hitPointsDescription": "2d8",
+        "speed": "30 ft",
+        "abilityScores": [10, 10, 10, 10, 14, 11],
+        "savingThrows": null,
+        "skills": "Medicine +4, Religion +2",
+        "damageResistances": null,
+        "damageImmunities": null,
+        "conditionImmunities": null,
+        "senses": "Passive Percepion 12",
+        "languages": "any one language (usually Common)",
+        "abilities": [],
+        "innateSpellcasting": {},
+        "spellcasting": {
+            "description": "The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has the following cleric spells prepared:",
+            "spells": [
+                {
+                    "level": "Cantrips",
+                    "slots": "at-will",
+                    "spells": "light, sacred flame, thumaturgy"
+                },
+                {
+                    "level": "1st level",
+                    "slots": "3 slots",
+                    "spells": "bless, cure wounds, sanctuary"
+                }
+            ]
+        },
+        "actions": [
+            {
+                "name": "Club",
+                "type": "Melee Weapon Attack",
+                "description": "+2 to hit, reach 5 ft, one target. Hit: 2 (1d4) bludgeoning damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "medium",
+        "name": "Archmage",
+        "challengeRating": 12,
+        "creatureSize": "Medium",
+        "creatureType": "humanoid (any race)",
+        "creatureAlignment": "any alignment",
+        "armorClass": 12,
+        "armorDescription": "15 with mage armor",
+        "hitPoints": 99,
+        "hitPointsDescription": "18d8 + 18",
+        "speed": "30 ft",
+        "abilityScores": [10, 14, 12, 20, 15, 16],
+        "savingThrows": "Int +9, Wis +6",
+        "skills": "Arcana +13, History +13",
+        "damageResistances": "damage from spells; nonmagical bludgeoning, piercing, and slashing (from stoneskin)",
+        "damageImmunities": null,
+        "conditionImmunities": null,
+        "senses": "Passive Percepion 12",
+        "languages": "any six languages",
+        "abilities": [
+            {
+                "name": "Magic Resistance",
+                "description": "The archmage has advantage on saving throws against spells and other magical effects."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {
+            "description": "The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast disguise self and invisibility at wll and has the following wizard spells prepared:",
+            "spells": [
+                {
+                    "level": "Cantrips",
+                    "slots": "at-will",
+                    "spells": "fire bolt, light, mage hand, prestidigitation, shocking grasp"
+                },
+                {
+                    "level": "1st level",
+                    "slots": "4 slots",
+                    "spells": "detect magic, identify, mage armor*, magic missile"
+                },
+                {
+                    "level": "2nd level",
+                    "slots": "3 slots",
+                    "spells": "detect thoughts, mirror image, misty step"
+                },
+                {
+                    "level": "3rd level",
+                    "slots": "3 slots",
+                    "spells": "counterspell, fly, lightning bolt"
+                },
+                {
+                    "level": "4th level",
+                    "slots": "3 slots",
+                    "spells": "banishment, fire shield, stoneskin*"
+                },
+                {
+                    "level": "5th level",
+                    "slots": "3 slots",
+                    "spells": "cone of cold, scrying, wall of force"
+                },
+                {
+                    "level": "6th level",
+                    "slots": "1 slot",
+                    "spells": "globe of invulnerability"
+                },
+                {
+                    "level": "7th level",
+                    "slots": "1 slot",
+                    "spells": "teleport"
+                },
+                {
+                    "level": "8th level",
+                    "slots": "1 slot",
+                    "spells": "mind blank*"
+                },
+                {
+                    "level": "9th level",
+                    "slots": "1 slot",
+                    "spells": "time stop"
+                }
+            ]
+        },
+        "actions": [
+            {
+                "name": "Dagger",
+                "type": "Melee or Ranged Weapon Attack",
+                "description": "+6 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 4 (1d4 + 2) piercing damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Cultist",
+        "challengeRating": "1/8",
+        "creatureSize": "Medium",
+        "creatureType": "humanoid (any race)",
+        "creatureAlignment": "any non-good alignment",
+        "armorClass": 12,
+        "armorDescription": "leather armor",
+        "hitPoints": 9,
+        "hitPointsDescription": "2d8",
+        "speed": "30 ft",
+        "abilityScores": [11, 12, 10, 10, 11, 10],
+        "savingThrows": "",
+        "skills": "Deception +2, Religion +2",
+        "damageResistances": "",
+        "damageImmunities": "",
+        "conditionImmunities": "",
+        "senses": "Passive Percepion 10",
+        "languages": "any one language (usually Common)",
+        "abilities": [
+            {
+                "name": "Dark Devotion",
+                "description": "The cultist has advantage on saving throws against being charmed or frightened."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Scimitar",
+                "type": "Melee Weapon Attack",
+                "description": "+3 to hit, reach 5 ft, one target. Hit: 4 (1d6 + 1) slashing damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Cult Fanatic",
+        "challengeRating": 2,
+        "creatureSize": "Medium",
+        "creatureType": "humanoid (any race)",
+        "creatureAlignment": "any non-good alignment",
+        "armorClass": 13,
+        "armorDescription": "leather armor",
+        "hitPoints": 33,
+        "hitPointsDescription": "6d8 + 6",
+        "speed": "30 ft",
+        "abilityScores": [11, 14, 12, 10, 13, 14],
+        "savingThrows": "",
+        "skills": "Deception +4, Persuasion +4, Religion +2",
+        "damageResistances": "",
+        "damageImmunities": "",
+        "conditionImmunities": "",
+        "senses": "Passive Percepion 11",
+        "languages": "any one language (usually Common)",
+        "abilities": [
+            {
+                "name": "Dark Devotion",
+                "description": "The cultist has advantage on saving throws against being charmed or frightened."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {
+            "description": "The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attack). The fanatic has the following cleric spells prepared:",
+            "spells": [
+                {
+                    "level": "Cantrips",
+                    "slots": "at-will",
+                    "spells": "light, sacred flame, thaumaturgy"
+                },
+                {
+                    "level": "1st level",
+                    "slots": "4 slots",
+                    "spells": "command, inflict wounds, shield of faith"
+                },
+                {
+                    "level": "2nd level",
+                    "slots": "3 slots",
+                    "spells": "hold person, spiritual weapon"
+                }
+            ]
+        },
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The fantic makes two melee attacks."
+            },
+            {
+                "name": "Dagger",
+                "type": "Melee or Ranged Weapon Attack",
+                "description": "+4 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 4 (1d4 + 2) piercing damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "medium",
+        "name": "Wight",
+        "challengeRating": 3,
+        "creatureSize": "Medium",
+        "creatureType": "undead",
+        "creatureAlignment": "neutral evil",
+        "armorClass": 14,
+        "armorDescription": "studded leather",
+        "hitPoints": 45,
+        "hitPointsDescription": "6d8 + 18",
+        "speed": "30 ft",
+        "abilityScores": [15, 14, 16, 1, 13, 15],
+        "savingThrows": "",
+        "skills": "Perception +3, Stealth +4",
+        "damageResistances": "necrotic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't silvered",
+        "damageImmunities": "poison",
+        "conditionImmunities": "exhaustion, poisoned",
+        "senses": "darkvision 60 ft, passive Percepion 13",
+        "languages": "the languages it knew in life",
+        "abilities": [
+            {
+                "name": "Sunlight Sensitivity",
+                "description": "While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The wight makes two longsword attacks or two longbow attacks. It can use its Life Drain in place of one longsword attack."
+            },
+            {
+                "name": "Life Drain",
+                "type": "Melee Weapon Attack",
+                "description": "+4 to hit, reach 5 ft, one creature. Hit: 5 (1d6 + 2) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time."
+            },
+            {
+                "name": "Longsword",
+                "type": "Melee Weapon Attack",
+                "description": "+4 to hit, reach 5 ft, one target. Hit: 6 (1d8 +2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands."
+            },
+            {
+                "name": "Longbow",
+                "type": "Ranged Weapon Attack",
+                "description": "+4 to hit, range 150/600 ft, one target. Hit: 6 (1d8 + 2) piercing damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "medium",
+        "name": "Will-o'-Wisp",
+        "challengeRating": 2,
+        "creatureSize": "Tiny",
+        "creatureType": "undead",
+        "creatureAlignment": "chaotic evil",
+        "armorClass": 19,
+        "armorDescription": null,
+        "hitPoints": 22,
+        "hitPointsDescription": "9d4",
+        "speed": "0 ft, fly 50 ft (hover)",
+        "abilityScores": [1, 28, 10, 13, 14, 11],
+        "savingThrows": "",
+        "skills": "",
+        "damageResistances": "acid, cold, fire, necrotic, thunder; bludgeoning, piercing, and slashing from nonmagical attacks",
+        "damageImmunities": "lightning, poison",
+        "conditionImmunities": "exhaustion, grappled, paralyzed, poisoned, prone, restrained, unconscious",
+        "senses": "darkvision 120 ft, passive Percepion 12",
+        "languages": "the languages it knew in life",
+        "abilities": [
+            {
+                "name": "Consume Life",
+                "description": "As a bonus action, the will-o'-wisp can target one creature it can see within 5 ft of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points."
+            },
+            {
+                "name": "Ephemereal",
+                "description": "The will-o'-wisp can't wear or carry anything."
+            },
+            {
+                "name": "Incorporeal Movement",
+                "description": "The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object."
+            },
+            {
+                "name": "Variable Illumination",
+                "description": "The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of feet equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Shock",
+                "type": "Melee Spell Attack",
+                "description": "+4 to hit, reach 5 ft, one creature. Hit 9 (2d8) lightning damage."
+            },
+            {
+                "name": "Invisibility",
+                "description": "The will-o'-wisp and its light magically become invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell)."
+            }
+        ],
+        "legendaryActions": {}
     }
 ];
