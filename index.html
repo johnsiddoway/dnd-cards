@@ -20,8 +20,8 @@
                 </div>
             </div>
         </header>
-        <main role="main">
-            <div class="flexbox" data-bind="foreach: monstersSelected">
+        <main role="main" data-bind="foreach: pages">
+            <div class="page" data-bind="foreach: monsters, css: { 'break-before': $index() !== 0 }">
                 <div class="statblock" data-bind="class: pageSize">
                     <div class="header">
                         <div class="challenge-rating float-right">CR: <span data-bind="text: challengeRating"></span> (<span data-bind="text: $root.crToXP.get(challengeRating).toLocaleString()"></span> XP)</div>
@@ -88,7 +88,7 @@
                         </div>
                     </div> <!-- /main -->
                 </div> <!-- /statblock -->
-            </div>
+            </div> <!-- /page -->
         </main>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>

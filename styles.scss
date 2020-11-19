@@ -42,29 +42,28 @@ header {
     }
 }
 
-main {
-    height: $letter-height + 15px; // Added to cover the grid gap between rows.
+.page {
+    height: $letter-height + 25px;
     width: $letter-width;
     padding: $paper-padding;
     margin-bottom: 25px;
     background: white;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-}
 
-.flexbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: $letter-height/2 $letter-height/2;
     grid-auto-rows: $letter-height/2;
-    gap: 17px 10px;
+    gap: 15px 10px;  
 
     & > * {
         border: $border-width solid black;
         background: lightblue;
-    }
+    }  
 }
 
 .small {
+
 }
 
 .medium {
@@ -148,6 +147,11 @@ main {
     float: right!important;
 }
 
+.break-before {
+    break-before: always;
+    page-break-before: always;
+}
+
 /* https://stackoverflow.com/a/4407335 */
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -162,7 +166,7 @@ main {
     header {
         display: none;
     }
-    main {
+    .page {
         height: $letter-height;
         width: $letter-width;
         padding: 0;
