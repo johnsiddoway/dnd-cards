@@ -59,7 +59,7 @@ header {
     & > * {
         border: $border-width solid black;
         background: lightblue;
-    }  
+    }
 }
 
 .small {
@@ -126,7 +126,7 @@ header {
             border-bottom: 1px solid black;
         }
 
-        > div {
+        div {
             page-break-inside: avoid;
             break-inside: avoid;
         }

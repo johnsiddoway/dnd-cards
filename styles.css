@@ -127,7 +127,7 @@ header .selectors .monster {
   border-bottom: 1px solid black;
 }
 
-.statblock .main > div {
+.statblock .main div {
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
 }
