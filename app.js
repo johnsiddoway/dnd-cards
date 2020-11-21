@@ -1,27 +1,27 @@
-var pageSizes = new Map([
+var PageSizes = new Map([
     ["small", 1],
     ["medium", 2],
     ["large", 4]
 ]);
-function monsterPage() {
+function MonsterPage() {
     var self = this;
     self.maxSize = 4;
     self.monsters = ko.observableArray();
     self.currentSize = ko.computed(function(){
         var total = 0;
         for(var i = 0; i < self.monsters().length; i++) {
-            total += pageSizes.get(self.monsters()[i].pageSize);
+            total += PageSizes.get(self.monsters()[i].pageSize);
         }
         return total;
     });
     self.canAdd = function(monster) {
-        return self.currentSize() + pageSizes.get(monster.pageSize) <= self.maxSize;
+        return self.currentSize() + PageSizes.get(monster.pageSize) <= self.maxSize;
     }
     self.addMonster = function(monster) {
         self.monsters.push(monster);
         self.monsters.sort((a, b) => {
-            if (pageSizes.get(a.pageSize) < pageSizes.get(b.pageSize)) return -1;
-            if (pageSizes.get(a.pageSize) > pageSizes.get(b.pageSize)) return 1;
+            if (PageSizes.get(a.pageSize) < PageSizes.get(b.pageSize)) return -1;
+            if (PageSizes.get(a.pageSize) > PageSizes.get(b.pageSize)) return 1;
             return a.name.localeCompare(b.name);
         });
     }
