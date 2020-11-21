@@ -54,7 +54,7 @@ function App() {
         if (last !== undefined && last.canAdd(monster)) {
             last.addMonster(monster);
         } else {
-            last = new monsterPage();
+            last = new MonsterPage();
             last.addMonster(monster);
             self.pages.push(last);
         }
