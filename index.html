@@ -101,10 +101,6 @@
             var page = new Page();
             $(document).ready(function () {
                 monsters.push(...customMonsters); // combine the SRD stats with non-SRD stats
-                monsters.sort((a,b) => (a.pageSize < b.pageSize)
-                    ? (a.name > b.name) ? 1 : -1
-                    : (a.name > b.name) ? 1 : -1
-                );
                 page.init(monsters);
                 ko.applyBindings(page);
             });

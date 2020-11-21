@@ -1,3 +1,9 @@
+function sortMonsters(a, b) {
+    return (a.pageSize < b.pageSize)
+        ? (a.name > b.name) ? 1 : -1
+        : (a.name > b.name) ? 1 : -1;
+}
+
 function monsterPage() {
     var self = this;
     self.pageSizes = new Map([
@@ -19,6 +25,7 @@ function monsterPage() {
     }
     self.addMonster = function(monster) {
         self.monsters.push(monster);
+        self.monsters.sort(sortMonsters);
     }
 };
 
@@ -36,32 +43,30 @@ function Page() {
         // By not setting this on the input monster, I can treat each clone as (hopefully) truly unique.
         clone.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
         self.monstersSelected.push(clone);
-        var last = self.pages()[self.pages().length - 1];
-        if (last !== undefined && last.canAdd(clone)) {
-            last.addMonster(clone);
-        } else {
-            last = new monsterPage();
-            last.addMonster(clone);
-            self.pages.push(last);
-        }
+        self.addMonsterToPage(clone);
     }
 
     self.removeMonster = function(monster) {
         self.monstersSelected.remove(monster);
-        var pagesToDelete = [];
-        for(var i = 0; i < self.pages().length; i++) {
-            var p = self.pages()[i];
-            p.monsters.remove(monster);
-            if (p.currentSize() === 0) {
-                pagesToDelete.push(p);
-            }
+        self.pages.removeAll();
+        self.monstersSelected().forEach(self.addMonsterToPage);
+    }
+
+    self.addMonsterToPage = function(monster) {
+        var last = self.pages()[self.pages().length - 1];
+        if (last !== undefined && last.canAdd(monster)) {
+            last.addMonster(monster);
+        } else {
+            last = new monsterPage();
+            last.addMonster(monster);
+            self.pages.push(last);
         }
-        pagesToDelete.forEach(p => page.pages.remove(p));        
     }
 
     self.init = function (monsters) {
         // Bind server model to knockout model
         ko.utils.arrayPushAll(self.monsters, monsters);
+        self.monsters.sort(sortMonsters);
         self.crToXP = new Map([
             [0, 10],
             ['1/8', 25],
