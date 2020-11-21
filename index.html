@@ -98,11 +98,11 @@
         <script type="text/javascript" src="custom-data.js"></script>
         <!-- <script type="text/javascript" src="https://raw.githubusercontent.com/johnsiddoway/dnd-cards/main/data.js" crossorigin="anonymous"></script> -->
         <script type="text/javascript">
-            var page = new Page();
+            var app = new App();
             $(document).ready(function () {
                 monsters.push(...customMonsters); // combine the SRD stats with non-SRD stats
-                page.init(monsters);
-                ko.applyBindings(page);
+                app.init(monsters);
+                ko.applyBindings(app);
             });
         </script>
     </body>

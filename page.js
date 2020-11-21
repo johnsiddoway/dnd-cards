@@ -1,35 +1,32 @@
-function sortMonsters(a, b) {
-    return (a.pageSize < b.pageSize)
-        ? (a.name > b.name) ? 1 : -1
-        : (a.name > b.name) ? 1 : -1;
-}
-
+var pageSizes = new Map([
+    ["small", 1],
+    ["medium", 2],
+    ["large", 4]
+]);
 function monsterPage() {
     var self = this;
-    self.pageSizes = new Map([
-        ["small", 1],
-        ["medium", 2],
-        ["large", 4]
-    ]);
     self.maxSize = 4;
     self.monsters = ko.observableArray();
     self.currentSize = ko.computed(function(){
         var total = 0;
         for(var i = 0; i < self.monsters().length; i++) {
-            total += self.pageSizes.get(self.monsters()[i].pageSize);
+            total += pageSizes.get(self.monsters()[i].pageSize);
         }
         return total;
     });
     self.canAdd = function(monster) {
-        return self.currentSize() + self.pageSizes.get(monster.pageSize) <= self.maxSize;
+        return self.currentSize() + pageSizes.get(monster.pageSize) <= self.maxSize;
     }
     self.addMonster = function(monster) {
         self.monsters.push(monster);
-        self.monsters.sort(sortMonsters);
+        self.monsters.sort((a, b) => {
+            if (pageSizes.get(a.pageSize) < pageSizes.get(b.pageSize)) return -1;
+            if (pageSizes.get(a.pageSize) > pageSizes.get(b.pageSize)) return 1;
+            return a.name.localeCompare(b.name);
+        });
     }
 };
-
-function Page() {
+function App() {
     var self = this;
     self.abilityScoreModifiers = [0, -5, -4, -4, -3, -3, -2, -2, -1, -1, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10];
     self.crToXP = new Map();
@@ -66,7 +63,7 @@ function Page() {
     self.init = function (monsters) {
         // Bind server model to knockout model
         ko.utils.arrayPushAll(self.monsters, monsters);
-        self.monsters.sort(sortMonsters);
+        self.monsters.sort((a, b) => a.name.localeCompare(b.name));
         self.crToXP = new Map([
             [0, 10],
             ['1/8', 25],

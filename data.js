@@ -627,5 +627,42 @@ var monsters = [
             }
         ],
         "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Zombie",
+        "challengeRating": "1/4",
+        "creatureSize": "Medium",
+        "creatureType": "undead",
+        "creatureAlignment": "neutral evil",
+        "armorClass": 8,
+        "armorDescription": "",
+        "hitPoints": 22,
+        "hitPointsDescription": "3d8 + 9",
+        "speed": "20 ft",
+        "abilityScores": [13, 6, 16, 3, 6, 5],
+        "savingThrows": "Wis +0",
+        "skills": "",
+        "damageResistances": "",
+        "damageImmunities": "poison",
+        "conditionImmunities": "poisoned",
+        "senses": "darkvision 60 ft, passive Percepion 8",
+        "languages": "understands the languages it knew in life but can't speak",
+        "abilities": [
+            {
+                "name": "Undead Fortitude",
+                "description": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Slam",
+                "type": "Melee Weapon Attack",
+                "description": "+3 to hit, reach 5 ft, one target. Hit: 4 (1d6 + 1) bludgeoning damage."
+            }
+        ],
+        "legendaryActions": {}
     }
 ];
