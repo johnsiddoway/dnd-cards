@@ -130,7 +130,7 @@ header .selectors .monster {
 }
 
 .statblock .main .basic-stats {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid black;
 }
