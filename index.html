@@ -59,14 +59,13 @@
                             <div data-bind="visible: languages"><strong>Languages</strong> <span data-bind="text: languages"></span></div>
                         </div>
                         <!-- ko foreach: abilities -->
-                        <div><strong data-bind="text: name"></strong> <span data-bind="text: description"></span></div>
-                        <!-- /ko -->
-                        <span data-bind="visible: innateSpellcasting.description">
-                            <strong>Innate Spellcasting: </strong> <span data-bind="text: innateSpellcasting.description"></span>
-                            <!-- ko foreach: innateSpellcasting.spells -->
+                        <div>
+                            <strong data-bind="text: name"></strong> <span data-bind="text: description"></span>
+                            <!-- ko foreach: $data.spells -->
                             <div><span data-bind="text: level"></span> <em data-bind="text: spells"></em></div>
                             <!-- /ko -->
-                        </span>
+                        </div>
+                        <!-- /ko -->
                         <span data-bind="visible: spellcasting.description">
                             <div><strong>Spellcasting: </strong> <span data-bind="text: spellcasting.description"></span></div>
                             <!-- ko foreach: spellcasting.spells -->

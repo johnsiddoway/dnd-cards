@@ -22,7 +22,6 @@ var monsters = [
         "abilities": [
             { "name": "Aggressive", "description": "As a bonus action, the Orc can move up to its speed towards a hostile creature that it can see" }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             { "name": "Greataxe", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (ldl2 + 3) slashing damage." },
@@ -51,7 +50,6 @@ var monsters = [
         "senses": "Darkvision 60 ft, Passive Percepion 8",
         "languages": "Common, Giant",
         "abilities": [],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             { "name": "Greatclub", "description": "Melee Weapon Attack: +6 to hit, reach 5 ft, one target. Hit: 13 (2d8 + 4) bludgeoning damage." },
@@ -82,7 +80,6 @@ var monsters = [
         "abilities": [
             { "name": "Ice Walk", "description": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement." }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -126,7 +123,6 @@ var monsters = [
         "conditionImmunities": null,
         "senses": "passive Percepion 13",
         "languages": "-",
-        "innateSpellcasting": {},
         "spellcasting": {},
         "abilities": [],
         "actions": [
@@ -170,25 +166,26 @@ var monsters = [
         "abilities": [
             { "name": "Angelic Weapons", "description": "The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack)." },
             { "name": "Divine Awareness", "description": "The solar knows if it hears a lie." },
+            {
+                "name": "Innate Spellcasting",
+                "description": "The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:",
+                "spells": [
+                    {
+                        "level": "At will",
+                        "spells": "detect evil and god, invisibility (self only)"
+                    },
+                    {
+                        "level": "3/day each",
+                        "spells": "blade barrier, dispel evil and good, resurrection"
+                    },
+                    {
+                        "level": "1/day each",
+                        "spells": "commune, control weather"
+                    }
+                ]
+            },
             { "name": "Magic Resistance", "description": "The solar has advantage on saving throws against spells and other magical effects." }
         ],
-        "innateSpellcasting": {
-            "description": "The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:",
-            "spells": [
-                {
-                    "level": "At will",
-                    "spells": "detect evil and god, invisibility (self only)"
-                },
-                {
-                    "level": "3/day each",
-                    "spells": "blade barrier, dispel evil and good, resurrection"
-                },
-                {
-                    "level": "1/day each",
-                    "spells": "commune, control weather"
-                }
-            ]
-        },
         "spellcasting": {},
         "actions": [
             {
@@ -265,7 +262,6 @@ var monsters = [
                 "description": "The wererat has advantage on Wisdom (Perception) checks that rely on smell."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -311,7 +307,6 @@ var monsters = [
         "senses": "Passive Percepion 12",
         "languages": "any one language (usually Common)",
         "abilities": [],
-        "innateSpellcasting": {},
         "spellcasting": {
             "description": "The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has the following cleric spells prepared:",
             "spells": [
@@ -362,7 +357,6 @@ var monsters = [
                 "description": "The archmage has advantage on saving throws against spells and other magical effects."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {
             "description": "The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast disguise self and invisibility at wll and has the following wizard spells prepared:",
             "spells": [
@@ -453,7 +447,6 @@ var monsters = [
                 "description": "The cultist has advantage on saving throws against being charmed or frightened."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -490,7 +483,6 @@ var monsters = [
                 "description": "The cultist has advantage on saving throws against being charmed or frightened."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {
             "description": "The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attack). The fanatic has the following cleric spells prepared:",
             "spells": [
@@ -550,7 +542,6 @@ var monsters = [
                 "description": "While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -613,7 +604,6 @@ var monsters = [
                 "description": "The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of feet equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -654,7 +644,6 @@ var monsters = [
                 "description": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -699,7 +688,6 @@ var monsters = [
                 "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -765,23 +753,24 @@ var monsters = [
                 "description": "The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack)."
             },
             {
+                "name": "Innate Spellcasting",
+                "description": "The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components:",
+                "spells": [
+                    {
+                        "level": "At will",
+                        "spells": "detect evil and good"
+                    },
+                    {
+                        "level": "1/day each",
+                        "spells": "commune, raise dead"
+                    }
+                ]
+            },
+            {
                 "name": "Magic Resistance",
                 "description": "The deva has advantage on saving throws against spells and other magical effects."
             }
         ],
-        "innateSpellcasting": {
-            "description": "The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components:",
-            "spells": [
-                {
-                    "level": "At will",
-                    "spells": "detect evil and good"
-                },
-                {
-                    "level": "1/day each",
-                    "spells": "commune, raise dead"
-                }
-            ]
-        },
         "spellcasting": {},
         "actions": [
             {
@@ -834,27 +823,28 @@ var monsters = [
                 "description": "The planetar knows if it hears a lie."
             },
             {
+                "name": "Innate Spellcasting",
+                "description": "The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:",
+                "spells": [
+                    {
+                        "level": "At will",
+                        "spells": "detect evil and good, invisibility (self only)"
+                    },
+                    {
+                        "level": "3/day each",
+                        "spells": "blade barrier, dispel evil and good, flame strike, raise dead"
+                    },
+                    {
+                        "level": "1/day each",
+                        "spells": "commune, control weather, insect plague"
+                    }
+                ]
+            },
+            {
                 "name": "Magic Resistance",
                 "description": "The planetar has advantage on saving throws against spells and other magical effects."
             }
         ],
-        "innateSpellcasting": {
-            "description": "The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:",
-            "spells": [
-                {
-                    "level": "At will",
-                    "spells": "detect evil and good, invisibility (self only)"
-                },
-                {
-                    "level": "3/day each",
-                    "spells": "blade barrier, dispel evil and good, flame strike, raise dead"
-                },
-                {
-                    "level": "1/day each",
-                    "spells": "commune, control weather, insect plague"
-                }
-            ]
-        },
         "spellcasting": {},
         "actions": [
             {
@@ -903,7 +893,6 @@ var monsters = [
                 "description": "While the armor remains motionless, it is indistinguishable from a normal suit of armor."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -948,7 +937,6 @@ var monsters = [
                 "description": "While the sword remains motionless, it is indistinguishable from a normal sword."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -993,7 +981,6 @@ var monsters = [
                 "description": "While the rug remains motionless, it is indistinguishable from a normal rug."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -1026,7 +1013,6 @@ var monsters = [
         "senses": "darkvision 60 ft, tremorsense 60 ft, passive Percepion 11",
         "languages": "-",
         "abilities": [],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
@@ -1075,7 +1061,6 @@ var monsters = [
                 "description": "The azer sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
             }
         ],
-        "innateSpellcasting": {},
         "spellcasting": {},
         "actions": [
             {
