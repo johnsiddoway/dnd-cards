@@ -75,6 +75,14 @@ header .selectors .monster {
       grid-row-start: span 2;
 }
 
+.statblock {
+  cursor: pointer;
+}
+
+.statblock:hover {
+  background: indianred;
+}
+
 .statblock h3 {
   border-bottom: 1px solid;
   margin: 0;

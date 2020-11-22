@@ -22,7 +22,7 @@
         </header>
         <main role="main" data-bind="foreach: pages">
             <div class="page" data-bind="foreach: monsters, css: { 'break-before': $index() !== 0 }">
-                <div class="statblock" data-bind="class: pageSize">
+                <div class="statblock" data-bind="class: pageSize, click: $root.removeMonster">
                     <div class="header">
                         <div class="challenge-rating float-right">CR: <span data-bind="text: challengeRating"></span> (<span data-bind="text: $root.crToXP.get(challengeRating).toLocaleString()"></span> XP)</div>
                         <div class="name" data-bind="text: name"></div>

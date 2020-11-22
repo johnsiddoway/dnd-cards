@@ -76,6 +76,12 @@ header {
 }
 
 .statblock {
+    cursor: pointer;
+
+    &:hover {
+        background: indianred;
+    }
+
     h3 {
         border-bottom: 1px solid;
         margin: 0;
