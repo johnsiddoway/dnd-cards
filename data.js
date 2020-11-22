@@ -664,5 +664,426 @@ var monsters = [
             }
         ],
         "legendaryActions": {}
+    },
+    {
+        "pageSize": "large",
+        "name": "Aboleth",
+        "challengeRating": 10,
+        "creatureSize": "Large",
+        "creatureType": "aberration",
+        "creatureAlignment": "lawful evil",
+        "armorClass": 17,
+        "armorDescription": "natural armor",
+        "hitPoints": 135,
+        "hitPointsDescription": "18d10 + 36",
+        "speed": "10 ft, swim 40ft",
+        "abilityScores": [21, 9, 15, 18, 15, 18],
+        "savingThrows": "Con +6, Int +8, Wis +6",
+        "skills": "History +12, Perception +10",
+        "damageResistances": "",
+        "damageImmunities": "",
+        "conditionImmunities": "",
+        "senses": "darkvision 120 ft, passive Percepion 20",
+        "languages": "Deep Speech, telepathy 120 ft",
+        "abilities": [
+            {
+                "name": "Amphibious",
+                "description": "The aboleth can breathe air and water"
+            },
+            {
+                "name": "Mucous Cloud",
+                "description": "While underwater, the aboleth is surrounded by transformative mucus. A creature that touches the aboleth or hits it with a melee attack while within 5 feet of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater."
+            },
+            {
+                "name": "Probing Telepathy",
+                "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The aboleth makes three tentacle attacks."
+            },
+            {
+                "name": "Tentacle",
+                "type": "Melee Weapon Attack",
+                "description": "+9 to hit, reach 10 ft, one target. Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has noeffect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed."
+            },
+            {
+                "name": "Tail",
+                "type": "Meee Weapon Attack",
+                "description": "+9 to hit, reach 10 ft, one target. Hit: 15 (3d6 + 5) bludgeoning damage."
+            },
+            {
+                "name": "Enslave (3/day)",
+                "description": "The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically charmed by the Aboleth unti the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance. Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw whe it is at least 1 mile away from the aboleth."
+            }
+        ],
+        "legendaryActions": {
+            "description": "The aboleth can take 3 legendary actions, choosing from the options below. Only one legendary option can be used at a time and only at the end of another creature's turn. The aboleth regains spent legendary actions at the start of its turn.",
+            "actions": [
+                {
+                    "name": "Detect",
+                    "description": "The aboleth makes a Wisdom (Perception) check."
+                },
+                {
+                    "name": "Tail Swipe",
+                    "description": "The aboleth makes one tail attack."
+                },
+                {
+                    "name": "Psychic Drain (Costs 2 Actions)",
+                    "description": "One creature charmed by the aboleth takes 10 (3d6) psychic damage, and the aboleth regains hit points equal to the damage the creature takes."
+                }
+            ]
+        }
+    },
+    {
+        "pageSize": "medium",
+        "name": "Deva",
+        "challengeRating": 10,
+        "creatureSize": "Medium",
+        "creatureType": "celestial",
+        "creatureAlignment": "lawful good",
+        "armorClass": 17,
+        "armorDescription": "natural armor",
+        "hitPoints": 136,
+        "hitPointsDescription": "16d8 + 64",
+        "speed": "30 ft, fly 90 ft",
+        "abilityScores": [18, 18, 18, 17, 20, 20],
+        "savingThrows": "Wis +9, Cha +9",
+        "skills": "Insight +9, Perception +9",
+        "damageResistances": "radiant; bludgeoning, piercing, and slashing damage from nonmagical attacks",
+        "damageImmunities": "",
+        "conditionImmunities": "charmed, exhaustion, frightened",
+        "senses": "darkvision 120 ft, passive Percepion 10",
+        "languages": "all, telepathy 120 ft",
+        "abilities": [
+            {
+                "name": "Angelic Weapons",
+                "description": "The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack)."
+            },
+            {
+                "name": "Magic Resistance",
+                "description": "The deva has advantage on saving throws against spells and other magical effects."
+            }
+        ],
+        "innateSpellcasting": {
+            "description": "The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components:",
+            "spells": [
+                {
+                    "level": "At will",
+                    "spells": "detect evil and good"
+                },
+                {
+                    "level": "1/day each",
+                    "spells": "commune, raise dead"
+                }
+            ]
+        },
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The deva makes two melee attacks."
+            },
+            {
+                "name": "Mace",
+                "type": "Melee Weapon Attack",
+                "description": "+8 to hit, reach 5 ft, one target. Hit: 7 (1d6 + 4) bludgeoning damage plus 18 (4d8) radiant damage."
+            },
+            {
+                "name": "Healing Touch (3/Day)",
+                "description": "The deva touches another creature. The target magically regains 20 (4d8 + 2) hit points and is freed from any curse, disease, poison, blindness, or deafness."
+            },
+            {
+                "name": "Change Shape",
+                "description": "The deva magically polymorph into a humanoid or beast that has a challenge rating equal or less than its own, or back to its true form. It reverts to its tru form if it dies. Any equipment it is wearing or carryingis absorbed or borne by the new form (the dev's choice). In a new form, the deva retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and special senses are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "medium",
+        "name": "Planetar",
+        "challengeRating": 16,
+        "creatureSize": "Large",
+        "creatureType": "celestial",
+        "creatureAlignment": "lawful good",
+        "armorClass": 19,
+        "armorDescription": "natural armor",
+        "hitPoints": 200,
+        "hitPointsDescription": "16d10 + 112",
+        "speed": "40 ft, fly 120 ft",
+        "abilityScores": [24, 20, 24, 19, 22, 25],
+        "savingThrows": "Con +12, Wis +11, Cha +12",
+        "skills": "Perception +11",
+        "damageResistances": "radiant; bludgeoning, piercing, and slashing from nonmagical attacks",
+        "damageImmunities": "",
+        "conditionImmunities": "charmed, exhaustion, frightened",
+        "senses": "truesight 120 ft, passive Percepion 21",
+        "languages": "all, telepathy 120 ft",
+        "abilities": [
+            {
+                "name": "Angelic Weapons",
+                "description": "The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra 5d8 radiant damage (included in the attack)."
+            },
+            {
+                "name": "Divine Awareness",
+                "description": "The planetar knows if it hears a lie."
+            },
+            {
+                "name": "Magic Resistance",
+                "description": "The planetar has advantage on saving throws against spells and other magical effects."
+            }
+        ],
+        "innateSpellcasting": {
+            "description": "The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:",
+            "spells": [
+                {
+                    "level": "At will",
+                    "spells": "detect evil and good, invisibility (self only)"
+                },
+                {
+                    "level": "3/day each",
+                    "spells": "blade barrier, dispel evil and good, flame strike, raise dead"
+                },
+                {
+                    "level": "1/day each",
+                    "spells": "commune, control weather, insect plague"
+                }
+            ]
+        },
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The planetar makes two melee attacks."
+            },
+            {
+                "name": "Greatsword",
+                "type": "Melee Weapon Attack",
+                "description": "+12 to hit, reach 5 ft, one target. Hit: 21 (4d6 + 7) slashing damage plus 22 (5d8) radiant damage."
+            },
+            {
+                "name": "Healing Touch (4/Day)",
+                "description": "The planetar touches another creature. The target magically regains 30 (6d8 + 3) hit points and is freed from any curse, disease, poison, blindness, or deafness."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Animated Armor",
+        "challengeRating": 1,
+        "creatureSize": "Medium",
+        "creatureType": "construct",
+        "creatureAlignment": "unaligned",
+        "armorClass": 18,
+        "armorDescription": "natural armor",
+        "hitPoints": 33,
+        "hitPointsDescription": "6d8 + 6",
+        "speed": "25 ft",
+        "abilityScores": [14, 11, 13, 1, 3, 1],
+        "savingThrows": "",
+        "skills": "",
+        "damageResistances": "",
+        "damageImmunities": "poison, psychic",
+        "conditionImmunities": "blinded, charmed, deafened, exhaustion, frightened, paralyzed, petrified, poisoned",
+        "senses": "blindsight 60 ft (blind beyond this radius), passive Percepion 6",
+        "languages": "-",
+        "abilities": [
+            {
+                "name": "Antimagic Susceptibility",
+                "description": "The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
+            },
+            {
+                "name": "False Appearance",
+                "description": "While the armor remains motionless, it is indistinguishable from a normal suit of armor."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The armor makes two melee attacks."
+            },
+            {
+                "name": "Slam",
+                "type": "Melee Weapon Attack",
+                "description": "+4 to hit, reach 5 ft, one target. Hit: 5 (1d6 + 2) bludgeoning damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Flying Sword",
+        "challengeRating": "1/4",
+        "creatureSize": "Small",
+        "creatureType": "construct",
+        "creatureAlignment": "unaligned",
+        "armorClass": 17,
+        "armorDescription": "natural armor",
+        "hitPoints": 17,
+        "hitPointsDescription": "5d6",
+        "speed": "0 ft, fly 50 ft (hover)",
+        "abilityScores": [12, 15, 11, 1, 5, 1],
+        "savingThrows": "Dex +4",
+        "skills": "",
+        "damageResistances": "",
+        "damageImmunities": "poison, psychic",
+        "conditionImmunities": "blinded, carmed, deafened, frightened, paralyzed, petrified, poisoned",
+        "senses": "blindsight 60 ft (blind beyond this point), passive Percepion 7",
+        "languages": "-",
+        "abilities": [
+            {
+                "name": "Antimagic Susceptibility",
+                "description": "The sword is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
+            },
+            {
+                "name": "False Appearance",
+                "description": "While the sword remains motionless, it is indistinguishable from a normal sword."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Longsword",
+                "type": "Melee Weapon Attack",
+                "description": "+3 to hit, reach 5 ft, one target. Hit: 5 (1d8 + 1) slashing damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "medium",
+        "name": "Rug of Smothering",
+        "challengeRating": 2,
+        "creatureSize": "Large",
+        "creatureType": "construct",
+        "creatureAlignment": "unaligned",
+        "armorClass": 12,
+        "armorDescription": "",
+        "hitPoints": 33,
+        "hitPointsDescription": "6d10",
+        "speed": "10 ft",
+        "abilityScores": [17, 14, 10, 1, 3, 1],
+        "savingThrows": "",
+        "skills": "",
+        "damageResistances": "",
+        "damageImmunities": "poison, psychic",
+        "conditionImmunities": "blinded, charmed, deafened, frightened, paralyzed, petrified, poisoned",
+        "senses": "blindsight 60 ft (blind beyond this radius), passive Percepion 10",
+        "languages": "-",
+        "abilities": [
+            {
+                "name": "Antimagic Susceptibility",
+                "description": "The rug is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the rug must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
+            },
+            {
+                "name": "Damage Transfer",
+                "description": "While it is grappling a creature, the rug takes only half the damage dealt to it, and the creature grappled by the rug takes the other half."
+            },
+            {
+                "name": "False Appearance",
+                "description": "While the rug remains motionless, it is indistinguishable from a normal rug."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Smother",
+                "type": "Melee Weapon Attack",
+                "description": "+5 to hit, reach 5 ft, one Medium or smaller creature. Hit: The creature is grappled (escape DC 13). Until this grapple ends, the target is restrained, blinded, and at risk of suffocating, and the rug can't smother another target. In addition, at the start of each of the target's turns, the target takes 10 (2d6 + 3) bludgeoning damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Ankheg",
+        "challengeRating": 2,
+        "creatureSize": "Large",
+        "creatureType": "monstrosity",
+        "creatureAlignment": "unaligned",
+        "armorClass": 14,
+        "armorDescription": "natural armor",
+        "armorAddendum": "11 while prone",
+        "hitPoints": 39,
+        "hitPointsDescription": "6d10 + 6",
+        "speed": "30 ft, burrow 10 ft",
+        "abilityScores": [17, 11, 13, 1, 13, 6],
+        "savingThrows": "",
+        "skills": "",
+        "damageResistances": "",
+        "damageImmunities": "",
+        "conditionImmunities": "",
+        "senses": "darkvision 60 ft, tremorsense 60 ft, passive Percepion 11",
+        "languages": "-",
+        "abilities": [],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Bite",
+                "type": "Melee Weapon Attack",
+                "description": "+5 to hit, reach 5 ft, one target. Hit: 10 (2d6 + 3) slashing damage plus 3 (1d6) acid damage. If the target is a Large or smaller creature, it is grappled (escape DC 13). Until this grapple ends, the ankheg can bite only the grappled creature and has advantage on attack rolls to do so."
+            },
+            {
+                "name": "Acid Spray (Recharge 6)",
+                "description": "The ankheg spits acid in a line that is 30 feet long and 5 feet wide, provided that it has no creature grappled. Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much damage on a successful one."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Azer",
+        "challengeRating": 2,
+        "creatureSize": "Medium",
+        "creatureType": "elemental",
+        "creatureAlignment": "lawful neutral",
+        "armorClass": 17,
+        "armorDescription": "natural armor, shield",
+        "hitPoints": 39,
+        "hitPointsDescription": "6d8 + 12",
+        "speed": "30 ft",
+        "abilityScores": [17, 12, 15, 12, 13, 10],
+        "savingThrows": "Con +4",
+        "skills": "",
+        "damageResistances": "",
+        "damageImmunities": "fire, poison",
+        "conditionImmunities": "poisoned",
+        "senses": "passive Percepion 11",
+        "languages": "Ignan",
+        "abilities": [
+            {
+                "name": "Heated Body",
+                "description": "A creature that touches the azer or hits it with a melee attack while wihin 5 feet of it takes 5 (1d10) fire damage."
+            },
+            {
+                "name": "Heated Weapons",
+                "description": "When the azer hits wth a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack)."
+            },
+            {
+                "name": "Illumination",
+                "description": "The azer sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Warhammer",
+                "type": "Melee Weapon Attack",
+                "description": "+5 to hit, reach 5 ft, one target. Hit: 7 (1d8 + 3) bludgeoning dmage, or 8 (1d10 + 3) bludgeoning damage if used with two hads to make a melee attack, plus 3 (1d6) fire damage."
+            }
+        ],
+        "legendaryActions": {}
     }
 ];
