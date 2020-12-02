@@ -1,4 +1,4 @@
-var monsters = [
+export const monsters = [
     {
         "pageSize": "small",
         "name": "Orc",

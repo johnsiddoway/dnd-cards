@@ -1,9 +1,7 @@
 $border-width: 1px;
-
-$paper-padding: 0.1in;
-
-$letter-height: 11in;
+$letter-height: 10.75in;
 $letter-width: 8.5in;
+$paper-padding: 0.1in;
 
 body {
     background: rgb(204,204,204);
@@ -127,9 +125,9 @@ header {
         padding: 0.5rem;
 
         .basic-stats {
-            padding-bottom: 0.25rem;
+            // padding-bottom: 0.25rem;
             margin-bottom: 0.5rem;
-            border-bottom: 1px solid black;
+            // border-bottom: 1px solid black;
         }
 
         div {
