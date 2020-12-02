@@ -9,6 +9,14 @@ I've broken down stats into three sizes (Small, Medium, and Large), and written 
 
 ![example-1](dnd-cards-example-1.png)
 
+## How To Run It
+
+This iteration uses [React](https://reactjs.org/). I did not commit the production build assets, so you'll need to have [npm](https://www.npmjs.com/) installed. If you do not, follow the installation instructions for [npm and node here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). Once you have npm installed, you will need to run this once: `npm install`
+
+And then run one of these commands:
+* ```npm start``` to start a local development copy of the website
+* ```npm run build``` to build the production assets in the `/build` folder.
+
 # Statblock JSON Structure
 
 I couldn't find a good resource for D&D 5e statblocks in JSON format (or other formats, for that matter). So I started putting together my own, for usage here.
@@ -91,7 +99,7 @@ Complex stats (Innate Spellcasting, Spellcasting, Actions, and Legendary Actions
 As far as I'm aware, usage of monster and NPC stats from the SRD is valid in this repo as long as I include the SRD5.1, the Open Game License (OGL), and the copyright information of the SRD. All of these things should be available here: https://media.wizards.com/2016/downloads/DND/SRD-OGL_V5.1.pdf.
 
 Bootstrap is licensed under the MIT license - https://github.com/twbs/bootstrap/blob/main/LICENSE
-Knockout.js is licensed under the MIT license - https://github.com/knockout/knockout/blob/master/LICENSE
+React.js is licensed under the MIT license - https://github.com/facebook/react/blob/master/LICENSE
 This package is licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
 
 # Copyright Notice
