@@ -1,26 +1,25 @@
 import React from 'react';
 import "./App.css";
 import * as Constants from "./constants";
-import { monsters } from "./data";
-import { customMonsters } from "./custom-data";
+import customMonsters from "./custom-data";
+import monsters from "./data";
+import TypeAheadDropDown from './TypeAheadDropDown';
 
 class HomePageHeader extends React.Component {
     render() {
-        const available = this.props.available
-            .map((data, index) => <div key={index} className="monster noselect" onClick={() => this.props.selectMonster(data)}>{data.name}</div>);
         const selected = this.props.selected
             .map((data, index) => <div key={index} className="monster noselect" onClick={() => this.props.unselectMonster(data)}>{data.name}</div>);
         return (
-            <header className="float-right">
+            <div className="header">
                 <div className="selectors">
                     <div className="available">
-                        {available}
+                        <TypeAheadDropDown key="TypeAhead" monsters={this.props.available} onClick={this.props.selectMonster} />
                     </div>
                     <div className="selected">
                         {selected}
                     </div>
                 </div>
-            </header>
+            </div>
         );
     }
 }
@@ -28,9 +27,7 @@ class HomePageHeader extends React.Component {
 class HomePageMain extends React.Component {
     render() {
         const pages = this.props.pages.map((data, index) => <MonsterPageView key={index} index={index} data={data.monsters} onClick={this.props.unselectMonster}/>);
-        return <main role="main">
-            {pages}
-        </main>;
+        return <div className="main">{pages}</div>;
     }
 }
 
@@ -125,14 +122,14 @@ function Monster(props) {
         : null;
 
     return (
-        <div className={`statblock ${props.data.pageSize}`} onClick={props.onClick}>
-            <div className="header">
+        <div className={`stat-block ${props.data.pageSize}`} onClick={props.onClick}>
+            <div className="stat-header">
                 {challengeRating}
                 {name}
                 {creatureTypeAndAlignment}
             </div>
-            <div className="main">
-                <div className="basic-stats">
+            <div className="stat-body">
+                <div className="stat-basics">
                     {armorClass}
                     {hitPoints}
                     {speed}
@@ -223,7 +220,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="app">
                 <HomePageHeader key="homePageHeader"
                     available={this.state.available}
                     selected={this.state.selected}

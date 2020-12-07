@@ -1,4 +1,4 @@
-export const monsters = [
+export default [
     {
         "pageSize": "small",
         "name": "Orc",

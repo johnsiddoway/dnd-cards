@@ -4,17 +4,35 @@ body {
   font-size: 0.85rem;
 }
 
-header {
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   min-height: 100px;
-  width: 8.5in;
   padding: 0.1in;
-  margin-bottom: 25px;
+  width: 8.5in;
   background: white;
   -webkit-box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 
-header .selectors {
+.header .selectors {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -23,21 +41,35 @@ header .selectors {
           column-gap: 10px;
 }
 
-header .selectors > .available > *:hover {
+.header .selectors > .available > .monster:hover {
   background: lightgreen;
 }
 
-header .selectors > .selected > *:hover {
+.header .selectors > .selected > .monster:hover {
   background: indianred;
 }
 
-header .selectors .monster {
+.header .selectors .monster {
   border: 1px solid black;
   background: lightblue;
   line-height: 1.5rem;
   border: 1px solid black;
   padding: 5px;
   cursor: pointer;
+}
+
+.header input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  line-height: 1.5rem;
+}
+
+.main {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .page {
@@ -75,20 +107,20 @@ header .selectors .monster {
       grid-row-start: span 2;
 }
 
-.statblock {
+.stat-block {
   cursor: pointer;
 }
 
-.statblock:hover {
+.stat-block:hover {
   background: indianred;
 }
 
-.statblock h3 {
+.stat-block h3 {
   border-bottom: 1px solid;
   margin: 0;
 }
 
-.statblock table {
+.stat-block table {
   width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -96,49 +128,49 @@ header .selectors .monster {
   border-bottom: 1px black solid;
 }
 
-.statblock table td {
+.stat-block table td {
   text-align: center;
 }
 
-.statblock table th {
+.stat-block table th {
   text-align: center;
 }
 
-.statblock .header {
+.stat-block .stat-header {
   padding: 0.5rem;
   margin: 0;
   border-bottom: 1px black solid;
 }
 
-.statblock .header .name {
+.stat-block .stat-header .name {
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1.2;
   margin: 0;
 }
 
-.statblock .header .challenge-rating {
+.stat-block .stat-header .challenge-rating {
   line-height: 1.2;
 }
 
-.statblock .header .creature-type {
+.stat-block .stat-header .creature-type {
   margin: 0;
 }
 
-.statblock .main {
+.stat-block .stat-body {
   padding: 0.5rem;
 }
 
-.statblock .main .basic-stats {
+.stat-block .stat-body .stat-basics {
   margin-bottom: 0.5rem;
 }
 
-.statblock .main div {
+.stat-block .stat-body div {
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
 }
 
-.statblock.medium > .main, .statblock.large > .main {
+.stat-block.medium > .stat-body, .stat-block.large > .stat-body {
   -webkit-column-count: 2;
   column-count: 2;
   -webkit-column-gap: 20px;
@@ -171,7 +203,7 @@ header .selectors .monster {
 }
 
 @media print {
-  header {
+  .header {
     display: none;
   }
   .page {

@@ -1,3 +1,2 @@
-export const customMonsters = [
-    
+export default [
 ];
