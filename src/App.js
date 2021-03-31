@@ -101,8 +101,9 @@ function Monster(props) {
     var challengeRating = <div className="challenge-rating float-right">CR: {props.data.challengeRating} ({Constants.CRtoXP.get(props.data.challengeRating)} XP)</div>;
     var conditionImmunities = <MonsterStat key={`conditionImmunities`} name={`Condition Immunities`} description={props.data.conditionImmunities} />
     var creatureTypeAndAlignment = <div className="creature-type"><em>({props.data.creatureSize} {props.data.creatureType}, {props.data.creatureAlignment})</em></div>;
-    var damageImmunities = <MonsterStat key={`damageImmunities`} name={`Damage Immunities`} description={props.data.damageImmunities} />
+    var damageVulnerabilities = <MonsterStat key={`damageVulnerabilities`} name={`Damage Vulnerabilities`} description={props.data.damageVulnerabilities} />
     var damageResistances = <MonsterStat key={`damageResistances`} name={`Damage Resistances`} description={props.data.damageResistances} />
+    var damageImmunities = <MonsterStat key={`damageImmunities`} name={`Damage Immunities`} description={props.data.damageImmunities} />
     var hitPoints = <div><strong>Hit Points: {props.data.hitPoints}</strong> ({props.data.hitPointsDescription})</div>;
     var languages = <MonsterStat key={`languages`} name={`Languages`} description={props.data.languages} />
     var legendaryActionsDescription = props.data.legendaryActions.description
@@ -137,6 +138,7 @@ function Monster(props) {
                 </div>
                 {savingThrows}
                 {skills}
+                {damageVulnerabilities}
                 {damageResistances}
                 {damageImmunities}
                 {conditionImmunities}

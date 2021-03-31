@@ -41,6 +41,7 @@ Complex stats (Innate Spellcasting, Spellcasting, Actions, and Legendary Actions
     "abilityScores": [10, 10, 10, 10, 10, 10],
     "savingThrows": "",
     "skills": "",
+    "damageVulnerabilities": "",
     "damageResistances": "",
     "damageImmunities": "",
     "conditionImmunities": "",
