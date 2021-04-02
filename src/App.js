@@ -1,8 +1,8 @@
 import React from 'react';
 import "./App.css";
 import * as Constants from "./constants";
-import customMonsters from "./custom-data";
-import monsters from "./data";
+import { data } from "./data";
+import { customData } from "./custom-data";
 import TypeAheadDropDown from './TypeAheadDropDown';
 
 class HomePageHeader extends React.Component {
@@ -26,12 +26,12 @@ class HomePageHeader extends React.Component {
 
 class HomePageMain extends React.Component {
     render() {
-        const pages = this.props.pages.map((data, index) => <MonsterPageView key={index} index={index} data={data.monsters} onClick={this.props.unselectMonster}/>);
+        const pages = this.props.pages.map((data, index) => <MonsterPage key={index} index={index} data={data.monsters} onClick={this.props.unselectMonster}/>);
         return <div className="main">{pages}</div>;
     }
 }
 
-class MonsterPage {
+class MonsterPage extends React.Component {
     maxSize = 4;
     monsters = [];
 
@@ -56,17 +56,20 @@ class MonsterPage {
         this.monsters = updated; // I know, probably not valid React.
         return updated;
     }
-}
 
-function MonsterPageView(props) {
-    const cname = props.index === 0 ? "page" : "page break-before";
-    const statblocks = props.data.map((data, index) => <Monster key={index} data={data} onClick={() => props.onClick(data)}/>);
-    return <div className={cname}>{statblocks}</div>
+    render() {
+        const cname = this.props.index === 0 ? "page" : "page break-before";
+        const statblocks = this.props.data.map((data, index) => <Monster key={index} data={data} onClick={() => this.props.onClick(data)}/>);
+        return <div className={cname}>{statblocks}</div>;
+    }
 }
 
 function Monster(props) {
     if (!props.data.pageSize) return <div></div>;
-    var modifiers = props.data.abilityScores.map((score, index) => <td key={index}>{Constants.AbilityScoreModifiers[score]}</td>);
+    var modifiers = props.data.abilityScores.map((score, index) => {
+        const modifier = (score >= 10 ? "+" : "") + Constants.AbilityScoreModifiers[score];
+        return <td key={index}>{score} ({modifier})</td>
+    });
     var abilityScores = (
         <table>
             <thead>
@@ -164,8 +167,8 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            available: monsters.concat(customMonsters) // combine the SRD stats with non-SRD stats
-                .sort((a, b) => a.name.localeCompare(b.name)), // and sort the whole list
+             // combine the SRD stats with non-SRD stats and sort the whole list
+            available: data.concat(customData).sort((a, b) => a.name.localeCompare(b.name)),
             selected: [],
             pages: []
         }
