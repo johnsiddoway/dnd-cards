@@ -32,7 +32,7 @@ export const data = [
     {
         "pageSize": "small",
         "name": "Ogre",
-        "challengeRating": 2,
+        "challengeRating": "2",
         "creatureSize": "Large",
         "creatureType": "giant",
         "creatureAlignment": "chaotic evil",
@@ -60,7 +60,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Young White Dragon",
-        "challengeRating": 6,
+        "challengeRating": "6",
         "creatureSize": "Large",
         "creatureType": "dragon",
         "creatureAlignment": "chaotic evil",
@@ -146,7 +146,7 @@ export const data = [
     {
         "pageSize": "large",
         "name": "Solar",
-        "challengeRating": 21,
+        "challengeRating": "21",
         "creatureSize": "Large",
         "creatureType": "celestial",
         "creatureAlignment": "lawful good",
@@ -235,7 +235,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Wererat",
-        "challengeRating": 2,
+        "challengeRating": "2",
         "creatureSize": "Medium",
         "creatureType": "humanoid (human, shapechanger)",
         "creatureAlignment": "lawful evil",
@@ -334,7 +334,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Archmage",
-        "challengeRating": 12,
+        "challengeRating": "12",
         "creatureSize": "Medium",
         "creatureType": "humanoid (any race)",
         "creatureAlignment": "any alignment",
@@ -460,7 +460,7 @@ export const data = [
     {
         "pageSize": "small",
         "name": "Cult Fanatic",
-        "challengeRating": 2,
+        "challengeRating": "2",
         "creatureSize": "Medium",
         "creatureType": "humanoid (any race)",
         "creatureAlignment": "any non-good alignment",
@@ -519,7 +519,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Wight",
-        "challengeRating": 3,
+        "challengeRating": "3",
         "creatureSize": "Medium",
         "creatureType": "undead",
         "creatureAlignment": "neutral evil",
@@ -569,7 +569,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Will-o'-Wisp",
-        "challengeRating": 2,
+        "challengeRating": "2",
         "creatureSize": "Tiny",
         "creatureType": "undead",
         "creatureAlignment": "chaotic evil",
@@ -657,7 +657,7 @@ export const data = [
     {
         "pageSize": "large",
         "name": "Aboleth",
-        "challengeRating": 10,
+        "challengeRating": "10",
         "creatureSize": "Large",
         "creatureType": "aberration",
         "creatureAlignment": "lawful evil",
@@ -730,7 +730,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Deva",
-        "challengeRating": 10,
+        "challengeRating": "10",
         "creatureSize": "Medium",
         "creatureType": "celestial",
         "creatureAlignment": "lawful good",
@@ -796,7 +796,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Planetar",
-        "challengeRating": 16,
+        "challengeRating": "16",
         "creatureSize": "Large",
         "creatureType": "celestial",
         "creatureAlignment": "lawful good",
@@ -866,7 +866,7 @@ export const data = [
     {
         "pageSize": "small",
         "name": "Animated Armor",
-        "challengeRating": 1,
+        "challengeRating": "1",
         "creatureSize": "Medium",
         "creatureType": "construct",
         "creatureAlignment": "unaligned",
@@ -950,7 +950,7 @@ export const data = [
     {
         "pageSize": "medium",
         "name": "Rug of Smothering",
-        "challengeRating": 2,
+        "challengeRating": "2",
         "creatureSize": "Large",
         "creatureType": "construct",
         "creatureAlignment": "unaligned",
@@ -994,7 +994,7 @@ export const data = [
     {
         "pageSize": "small",
         "name": "Ankheg",
-        "challengeRating": 2,
+        "challengeRating": "2",
         "creatureSize": "Large",
         "creatureType": "monstrosity",
         "creatureAlignment": "unaligned",
@@ -1030,7 +1030,7 @@ export const data = [
     {
         "pageSize": "small",
         "name": "Azer",
-        "challengeRating": 2,
+        "challengeRating": "2",
         "creatureSize": "Medium",
         "creatureType": "elemental",
         "creatureAlignment": "lawful neutral",
