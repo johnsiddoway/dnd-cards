@@ -1,9 +1,8 @@
 import React from 'react';
 import "./App.css";
-import * as Constants from "./constants";
+
 import { data } from "./data";
 import { customData } from "./custom-data";
-import TypeAheadDropDown from './TypeAheadDropDown';
 import { HomePageHeader, HomePageMain } from './home-page';
 import { MonsterPage } from './monster-page';
 

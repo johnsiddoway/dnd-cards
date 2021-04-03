@@ -16,6 +16,9 @@ export function Monster(props) {
             </tbody>
         </table>
     );
+    var abilityHeader = props.data.abilities && props.data.abilities.length > 0
+        ? <div class="stat-break"></div>
+        : null;
     var abilities = props.data.abilities.map((ability, index) => {
         var spells = ability.spells
             ? ability.spells.map((spell, index) => <div key={index}>{spell.level} <em>{spell.spells}</em></div>)
@@ -28,7 +31,7 @@ export function Monster(props) {
         )
     });
     var actions = props.data.actions.map((action, index) => {
-        var header = index === 0 ? <h3>Actions</h3> : null;
+        var header = index === 0 ? <h3 class="action-header">Actions</h3> : null;
         return (
             <div key={index}>
                 {header}
@@ -69,20 +72,12 @@ export function Monster(props) {
                 {creatureTypeAndAlignment}
             </div>
             <div className="stat-body">
-                <div className="stat-basics">
-                    {armorClass}
-                    {hitPoints}
-                    {speed}
-                    {abilityScores}
-                </div>
-                {savingThrows}
-                {skills}
-                {damageVulnerabilities}
-                {damageResistances}
-                {damageImmunities}
-                {conditionImmunities}
-                {senses}
-                {languages}
+                {armorClass}
+                {hitPoints}
+                {speed}
+                {abilityScores}
+                {savingThrows} {skills} {damageVulnerabilities} {damageResistances} {damageImmunities} {conditionImmunities} {senses} {languages}
+                {abilityHeader}
                 {abilities}
                 {spellcastingDescription}
                 {spellcastingSpells}

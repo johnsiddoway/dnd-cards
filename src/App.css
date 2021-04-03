@@ -161,13 +161,19 @@ body {
   padding: 0.5rem;
 }
 
-.stat-block .stat-body .stat-basics {
-  margin-bottom: 0.5rem;
-}
-
 .stat-block .stat-body div {
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
+}
+
+.stat-block .action-header {
+  padding-top: 0.25rem;
+}
+
+.stat-block .stat-break {
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid black;
 }
 
 .stat-block.medium > .stat-body, .stat-block.large > .stat-body {
