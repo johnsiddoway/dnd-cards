@@ -6,7 +6,7 @@ import { customData } from "./custom-data";
 import { HomePageHeader, HomePageMain } from './home-page';
 import { MonsterPage } from './monster-page';
 
-class App extends React.Component {
+export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -80,6 +80,4 @@ class App extends React.Component {
             </div>
         );
     };
-}
-
-export default App;
+};
