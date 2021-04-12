@@ -1070,5 +1070,154 @@ export const data = [
             }
         ],
         "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Polar Bear",
+        "challengeRating": "2",
+        "creatureSize": "Large",
+        "creatureType": "beast",
+        "creatureAlignment": "unaligned",
+        "armorClass": "12",
+        "armorDescription": "natural armor",
+        "hitPoints": "42",
+        "hitPointsDescription": "5d10 + 15",
+        "speed": "40 ft., swim 30 ft.",
+        "abilityScores": [20, 10, 16, 2, 13, 7],
+        "savingThrows": null,
+        "skills": "Perception +3",
+        "damageVulnerabilities": null,
+        "damageResistances": null,
+        "damageImmunities": null,
+        "conditionImmunities": null,
+        "senses": "Passive Percepion 13",
+        "languages": "-",
+        "abilities": [
+            {
+                "name": "Keen Smell",
+                "description": "The bear has advantage on Wisdom (Perception) checks that rely on smell."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "type": "Melee Weapon Attack",
+                "description": "The bear makes two attacks: one with its bite and one with its claws."
+            },
+            {
+                "name": "Bite",
+                "type": "Melee Weapon Attack",
+                "description": "+7 to hit, reach 5 ft., one target. Hit: 9 (1d8 + 5) piercing damage."
+            },
+            {
+                "name": "Claws",
+                "type": "Melee Weapon Attack",
+                "description": "+7 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "medium",
+        "name": "Winter Wolf",
+        "challengeRating": "3",
+        "creatureSize": "Large",
+        "creatureType": "monstrosity",
+        "creatureAlignment": "neutral evil",
+        "armorClass": "13",
+        "armorDescription": "natural armor",
+        "hitPoints": "75",
+        "hitPointsDescription": "10d10 + 20",
+        "speed": "50 ft.",
+        "abilityScores": [18, 13, 14, 7, 12, 8],
+        "savingThrows": null,
+        "skills": "Perception +5, Stealth +3",
+        "damageVulnerabilities": null,
+        "damageResistances": null,
+        "damageImmunities": "cold",
+        "conditionImmunities": null,
+        "senses": "Passive Percepion 15",
+        "languages": "Common, Giant, Winter Wolf",
+        "abilities": [
+            {
+                "name": "Keen Hearing and Smell",
+                "description": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing and smell."
+            },
+            {
+                "name": "Pack Tactics",
+                "description": "The wol has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated."
+            },
+            {
+                "name": "Snow Camouflage",
+                "description": "The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Bite",
+                "type": "Melee Weapon Attack",
+                "description": "+6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone."
+            },
+            {
+                "name": "Cold Breath (Recharge 5-6)",
+                "description": "The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving thow, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one."
+            }
+        ],
+        "legendaryActions": {}
+    },
+    {
+        "pageSize": "small",
+        "name": "Troll",
+        "challengeRating": "5",
+        "creatureSize": "Large",
+        "creatureType": "giant",
+        "creatureAlignment": "chaotic evil",
+        "armorClass": "15",
+        "armorDescription": "natural armor",
+        "hitPoints": "84",
+        "hitPointsDescription": "8d10 + 40",
+        "speed": "30 ft.",
+        "abilityScores": [18, 13, 20, 7, 9, 7],
+        "savingThrows": null,
+        "skills": "Perception +2",
+        "damageVulnerabilities": null,
+        "damageResistances": null,
+        "damageImmunities": null,
+        "conditionImmunities": null,
+        "senses": "Darkvision 60 ft., Passive Percepion 12",
+        "languages": "Giant",
+        "abilities": [
+            {
+                "name": "Keen Smell",
+                "description": "The troll has advantage on Wisdom (Perception) checks that rely on smell."
+            },
+            {
+                "name": "Regeneration",
+                "description": "The troll regains 10 hit points at the start of its turn. If the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate."
+            }
+        ],
+        "innateSpellcasting": {},
+        "spellcasting": {},
+        "actions": [
+            {
+                "name": "Multiattack",
+                "description": "The troll makes three attacks: one with its bite and two with its claws."
+            },
+            {
+                "name": "Bite",
+                "type": "Melee Weapon Attack",
+                "description": "+7 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+            },
+            {
+                "name": "Claws",
+                "type": "Melee Weapon Attack",
+                "description": "+7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage."
+            }
+        ],
+        "legendaryActions": {}
     }
 ];
